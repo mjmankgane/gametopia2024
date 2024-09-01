@@ -8,7 +8,7 @@ Project title: Bridgett by GameTopia
 
 Project page: https://github.com/mjmankgane/gametopia2024
 
-*** After you finalize the project, you will update the readme file to include the following information ***
+*** After we finalize the project, we will update the readme file to include the following information ***
 
 Instructions for use (allowable actions): [Provide DETAILED  instructions on how to run AND interact with your program. If we cannot run it with relative ease, it will NOT be marked! So if it needs to be saved in a specific folder, or needs Internet access, or needs anything beyond simply double clicking the executable, document all that here. This is very IMPORTANT! Also, list all forms of interaction here, so if your program allows the user to press ‘Q’ to exit, or ‘left arrow’ or ‘right arrow’ to do specific things, document that here as well. If we cannot figure out how to interact with your program and nothing is documented, it will NOT be marked!]
 
