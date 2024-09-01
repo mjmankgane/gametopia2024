@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://info448.github.io/resources-and-layouts.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Android Development: Lecture Notes</title>
+  <meta name="description" content="Lecture Notes for INFO 448: Android Development.">
+  <meta name="generator" content="bookdown 0.5 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Android Development: Lecture Notes">
+  <meta property="og:type" content="book">
+  <meta property="og:url" content="https://info448.github.io/">
+  <meta property="og:image" content="https://info448.github.io/img/android_icon_transparent.png">
+  <meta property="og:description" content="Lecture Notes for INFO 448: Android Development.">
+  <meta name="github-repo" content="info448/book">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Android Development: Lecture Notes">
+  
+  <meta name="twitter:description" content="Lecture Notes for INFO 448: Android Development.">
+  <meta name="twitter:image" content="https://info448.github.io/img/android_icon_transparent.png">
+
+<meta name="author" content="Joel Ross">
+
+
+<meta name="date" content="2018-11-19">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  <link rel="shortcut icon" href="https://info448.github.io/img/android_icon_transparent.png" type="image/x-icon">
+<link rel="prev" href="https://info448.github.io/introduction.html">
+<link rel="next" href="https://info448.github.io/activities.html">
+<script type="text/javascript" async="" src="Android%20Development_%20Lecture%20Notes_files/js"></script><script async="" src="Android%20Development_%20Lecture%20Notes_files/analytics.js.download"></script><script src="Android%20Development_%20Lecture%20Notes_files/jquery.min.js.download"></script>
+<link href="Android%20Development_%20Lecture%20Notes_files/style.css" rel="stylesheet">
+<link href="Android%20Development_%20Lecture%20Notes_files/plugin-bookdown.css" rel="stylesheet">
+<link href="Android%20Development_%20Lecture%20Notes_files/plugin-highlight.css" rel="stylesheet">
+<link href="Android%20Development_%20Lecture%20Notes_files/plugin-search.css" rel="stylesheet">
+<link href="Android%20Development_%20Lecture%20Notes_files/plugin-fontsettings.css" rel="stylesheet">
+
+
+
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-98444716-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="Android%20Development_%20Lecture%20Notes_files/style(1).css" type="text/css">
+<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script></head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary   font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary"><div class="book-search" role="search"><input type="search" class="form-control" placeholder="Type to search"></div>
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="https://info448.github.io/" class="title">Android Development</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="https://info448.github.io/index.html"><i class="fa fa-check"></i>About this Book</a></li>
+<li class="part"><span><b>I Lectures</b></span></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="https://info448.github.io/introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul style="display: none;">
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="https://info448.github.io/introduction.html#android-history"><i class="fa fa-check"></i><b>1.1</b> Android History</a><ul style="display: none;">
+<li class="chapter" data-level="" data-path="introduction.html"><a href="https://info448.github.io/introduction.html#android-versions"><i class="fa fa-check"></i>Android Versions</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="https://info448.github.io/introduction.html#legal-battles"><i class="fa fa-check"></i>Legal Battles</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="https://info448.github.io/introduction.html#building-apps"><i class="fa fa-check"></i><b>1.2</b> Building Apps</a><ul style="display: none;">
+<li class="chapter" data-level="" data-path="introduction.html"><a href="https://info448.github.io/introduction.html#creating-a-project"><i class="fa fa-check"></i>Creating a Project</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="https://info448.github.io/introduction.html#running-the-app"><i class="fa fa-check"></i>Running the App</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="https://info448.github.io/introduction.html#app-source-code"><i class="fa fa-check"></i><b>1.3</b> App Source Code</a><ul style="display: none;">
+<li class="chapter" data-level="" data-path="introduction.html"><a href="https://info448.github.io/introduction.html#xml-resources"><i class="fa fa-check"></i>XML Resources</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="https://info448.github.io/introduction.html#the-manifest"><i class="fa fa-check"></i>The Manifest</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="https://info448.github.io/introduction.html#java-activities"><i class="fa fa-check"></i>Java Activities</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="https://info448.github.io/introduction.html#gradle-scripts"><i class="fa fa-check"></i>Gradle Scripts</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="introduction.html"><a href="https://info448.github.io/introduction.html#logging-adb"><i class="fa fa-check"></i><b>1.4</b> Logging &amp; ADB</a><ul style="display: none;">
+<li class="chapter" data-level="" data-path="introduction.html"><a href="https://info448.github.io/introduction.html#log-methods"><i class="fa fa-check"></i>Log Methods</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="https://info448.github.io/introduction.html#logcat"><i class="fa fa-check"></i>Logcat</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="https://info448.github.io/introduction.html#toast"><i class="fa fa-check"></i>Toast</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="introduction.html"><a href="https://info448.github.io/introduction.html#adding-interaction"><i class="fa fa-check"></i><b>1.5</b> Adding Interaction</a></li>
+<li class="chapter" data-level="1.6" data-path="introduction.html"><a href="https://info448.github.io/introduction.html#kotlin-setup"><i class="fa fa-check"></i><b>1.6</b> Kotlin</a></li>
+</ul></li>
+<li class="chapter active" data-level="2" data-path="resources-and-layouts.html"><a href="https://info448.github.io/resources-and-layouts.html"><i class="fa fa-check"></i><b>2</b> Resources and Layouts</a><ul style="display: block;">
+<li class="chapter" data-level="2.1" data-path="resources-and-layouts.html"><a href="https://info448.github.io/resources-and-layouts.html#resources"><i class="fa fa-check"></i><b>2.1</b> Resources</a><ul style="display: none;">
+<li class="chapter" data-level="" data-path="resources-and-layouts.html"><a href="https://info448.github.io/resources-and-layouts.html#r"><i class="fa fa-check"></i>R</a></li>
+<li class="chapter" data-level="" data-path="resources-and-layouts.html"><a href="https://info448.github.io/resources-and-layouts.html#alternative-resources"><i class="fa fa-check"></i>Alternative Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="resources-and-layouts.html"><a href="https://info448.github.io/resources-and-layouts.html#views"><i class="fa fa-check"></i><b>2.2</b> Views</a><ul style="display: none;">
+<li class="chapter" data-level="" data-path="resources-and-layouts.html"><a href="https://info448.github.io/resources-and-layouts.html#view-properties"><i class="fa fa-check"></i>View Properties</a></li>
+<li class="chapter" data-level="" data-path="resources-and-layouts.html"><a href="https://info448.github.io/resources-and-layouts.html#views-and-java"><i class="fa fa-check"></i>Views and Java</a></li>
+<li class="chapter" data-level="" data-path="resources-and-layouts.html"><a href="https://info448.github.io/resources-and-layouts.html#practice"><i class="fa fa-check"></i>Practice</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="resources-and-layouts.html"><a href="https://info448.github.io/resources-and-layouts.html#layouts"><i class="fa fa-check"></i><b>2.3</b> Layouts</a><ul style="display: none;">
+<li class="chapter" data-level="" data-path="resources-and-layouts.html"><a href="https://info448.github.io/resources-and-layouts.html#linearlayout"><i class="fa fa-check"></i>LinearLayout</a></li>
+<li class="chapter" data-level="" data-path="resources-and-layouts.html"><a href="https://info448.github.io/resources-and-layouts.html#relativelayout"><i class="fa fa-check"></i>RelativeLayout</a></li>
+<li class="chapter" data-level="" data-path="resources-and-layouts.html"><a href="https://info448.github.io/resources-and-layouts.html#constraintlayout"><i class="fa fa-check"></i>ConstraintLayout</a></li>
+<li class="chapter" data-level="" data-path="resources-and-layouts.html"><a href="https://info448.github.io/resources-and-layouts.html#other-layouts"><i class="fa fa-check"></i>Other Layouts</a></li>
+<li class="chapter" data-level="" data-path="resources-and-layouts.html"><a href="https://info448.github.io/resources-and-layouts.html#combining-and-inflating-layouts"><i class="fa fa-check"></i>Combining and Inflating Layouts</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="resources-and-layouts.html"><a href="https://info448.github.io/resources-and-layouts.html#inputs"><i class="fa fa-check"></i><b>2.4</b> Inputs</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="activities.html"><a href="https://info448.github.io/activities.html"><i class="fa fa-check"></i><b>3</b> Activities</a><ul style="display: none;">
+<li class="chapter" data-level="3.1" data-path="activities.html"><a href="https://info448.github.io/activities.html#making-activities"><i class="fa fa-check"></i><b>3.1</b> Making Activities</a></li>
+<li class="chapter" data-level="3.2" data-path="activities.html"><a href="https://info448.github.io/activities.html#the-activity-lifecycle"><i class="fa fa-check"></i><b>3.2</b> The Activity Lifecycle</a><ul style="display: none;">
+<li class="chapter" data-level="" data-path="activities.html"><a href="https://info448.github.io/activities.html#overriding-the-callback-methods"><i class="fa fa-check"></i>Overriding the Callback Methods</a></li>
+<li class="chapter" data-level="" data-path="activities.html"><a href="https://info448.github.io/activities.html#saving-and-restoring-activity-state"><i class="fa fa-check"></i>Saving and Restoring Activity State</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="activities.html"><a href="https://info448.github.io/activities.html#context"><i class="fa fa-check"></i><b>3.3</b> Context</a></li>
+<li class="chapter" data-level="3.4" data-path="activities.html"><a href="https://info448.github.io/activities.html#multiple-activities"><i class="fa fa-check"></i><b>3.4</b> Multiple Activities</a><ul style="display: none;">
+<li class="chapter" data-level="" data-path="activities.html"><a href="https://info448.github.io/activities.html#activity-intents"><i class="fa fa-check"></i>Intents</a></li>
+<li class="chapter" data-level="" data-path="activities.html"><a href="https://info448.github.io/activities.html#back-tasks"><i class="fa fa-check"></i>Back &amp; Tasks</a></li>
+<li class="chapter" data-level="" data-path="activities.html"><a href="https://info448.github.io/activities.html#up-navigation"><i class="fa fa-check"></i>Up Navigation</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="data-views.html"><a href="https://info448.github.io/data-views.html"><i class="fa fa-check"></i><b>4</b> Data-Driven Views</a><ul style="display: none;">
+<li class="chapter" data-level="4.1" data-path="data-views.html"><a href="https://info448.github.io/data-views.html#listviews-and-adapters"><i class="fa fa-check"></i><b>4.1</b> ListViews and Adapters</a></li>
+<li class="chapter" data-level="4.2" data-path="data-views.html"><a href="https://info448.github.io/data-views.html#networking-with-volley"><i class="fa fa-check"></i><b>4.2</b> Networking with Volley</a><ul style="display: none;">
+<li class="chapter" data-level="" data-path="data-views.html"><a href="https://info448.github.io/data-views.html#using-volley"><i class="fa fa-check"></i>Using Volley</a></li>
+<li class="chapter" data-level="" data-path="data-views.html"><a href="https://info448.github.io/data-views.html#requestqueue-singletons"><i class="fa fa-check"></i>RequestQueue Singletons</a></li>
+<li class="chapter" data-level="" data-path="data-views.html"><a href="https://info448.github.io/data-views.html#downloading-images"><i class="fa fa-check"></i>Downloading Images</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="material-design.html"><a href="https://info448.github.io/material-design.html"><i class="fa fa-check"></i><b>5</b> Material Design</a><ul style="display: none;">
+<li class="chapter" data-level="5.1" data-path="material-design.html"><a href="https://info448.github.io/material-design.html#the-material-design-language"><i class="fa fa-check"></i><b>5.1</b> The Material Design Language</a></li>
+<li class="chapter" data-level="5.2" data-path="material-design.html"><a href="https://info448.github.io/material-design.html#material-styles-icons"><i class="fa fa-check"></i><b>5.2</b> Material Styles &amp; Icons</a></li>
+<li class="chapter" data-level="5.3" data-path="material-design.html"><a href="https://info448.github.io/material-design.html#design-support-libraries"><i class="fa fa-check"></i><b>5.3</b> Design Support Libraries</a><ul style="display: none;">
+<li class="chapter" data-level="" data-path="material-design.html"><a href="https://info448.github.io/material-design.html#widgets"><i class="fa fa-check"></i>Widgets</a></li>
+<li class="chapter" data-level="" data-path="material-design.html"><a href="https://info448.github.io/material-design.html#coordinator-layout"><i class="fa fa-check"></i>Coordinator Layout</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="material-design.html"><a href="https://info448.github.io/material-design.html#animations"><i class="fa fa-check"></i><b>5.4</b> Animations</a></li>
+<li class="chapter" data-level="" data-path="material-design.html"><a href="https://info448.github.io/material-design.html#resources-1"><i class="fa fa-check"></i>Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="fragments.html"><a href="https://info448.github.io/fragments.html"><i class="fa fa-check"></i><b>6</b> Fragments</a><ul style="display: none;">
+<li class="chapter" data-level="6.1" data-path="fragments.html"><a href="https://info448.github.io/fragments.html#creating-a-fragment"><i class="fa fa-check"></i><b>6.1</b> Creating a Fragment</a><ul style="display: none;">
+<li class="chapter" data-level="" data-path="fragments.html"><a href="https://info448.github.io/fragments.html#activity-to-fragment-communication"><i class="fa fa-check"></i>Activity-to-Fragment Communication</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="fragments.html"><a href="https://info448.github.io/fragments.html#dynamic-fragments"><i class="fa fa-check"></i><b>6.2</b> Dynamic Fragments</a><ul style="display: none;">
+<li class="chapter" data-level="" data-path="fragments.html"><a href="https://info448.github.io/fragments.html#instantiating-fragments"><i class="fa fa-check"></i>Instantiating Fragments</a></li>
+<li class="chapter" data-level="" data-path="fragments.html"><a href="https://info448.github.io/fragments.html#transactions"><i class="fa fa-check"></i>Transactions</a></li>
+<li class="chapter" data-level="" data-path="fragments.html"><a href="https://info448.github.io/fragments.html#inter-fragment-communication"><i class="fa fa-check"></i>Inter-Fragment Communication</a></li>
+<li class="chapter" data-level="" data-path="fragments.html"><a href="https://info448.github.io/fragments.html#the-back-stack"><i class="fa fa-check"></i>The Back Stack</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="intents.html"><a href="https://info448.github.io/intents.html"><i class="fa fa-check"></i><b>7</b> Intents</a><ul style="display: none;">
+<li class="chapter" data-level="7.1" data-path="intents.html"><a href="https://info448.github.io/intents.html#intents-for-another-activity-explicit"><i class="fa fa-check"></i><b>7.1</b> Intents for Another Activity (Explicit)</a><ul style="display: none;">
+<li class="chapter" data-level="" data-path="intents.html"><a href="https://info448.github.io/intents.html#extras"><i class="fa fa-check"></i>Extras</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="intents.html"><a href="https://info448.github.io/intents.html#intents-for-another-app-implicit"><i class="fa fa-check"></i><b>7.2</b> Intents for Another App (Implicit)</a></li>
+<li class="chapter" data-level="7.3" data-path="intents.html"><a href="https://info448.github.io/intents.html#intents-for-a-response"><i class="fa fa-check"></i><b>7.3</b> Intents for a Response</a></li>
+<li class="chapter" data-level="7.4" data-path="intents.html"><a href="https://info448.github.io/intents.html#listening-for-intents"><i class="fa fa-check"></i><b>7.4</b> Listening for Intents</a></li>
+<li class="chapter" data-level="7.5" data-path="intents.html"><a href="https://info448.github.io/intents.html#broadcasts-and-receivers"><i class="fa fa-check"></i><b>7.5</b> Broadcasts and Receivers</a></li>
+<li class="chapter" data-level="7.6" data-path="intents.html"><a href="https://info448.github.io/intents.html#menus"><i class="fa fa-check"></i><b>7.6</b> Menus</a><ul style="display: none;">
+<li class="chapter" data-level="" data-path="intents.html"><a href="https://info448.github.io/intents.html#action-views"><i class="fa fa-check"></i>Action Views</a></li>
+<li class="chapter" data-level="" data-path="intents.html"><a href="https://info448.github.io/intents.html#context-menus"><i class="fa fa-check"></i>Context Menus</a></li>
+</ul></li>
+<li class="chapter" data-level="7.7" data-path="intents.html"><a href="https://info448.github.io/intents.html#an-intent-example-sms"><i class="fa fa-check"></i><b>7.7</b> An Intent Example: SMS</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="notifications-settings.html"><a href="https://info448.github.io/notifications-settings.html"><i class="fa fa-check"></i><b>8</b> Notifications &amp; Settings</a><ul style="display: none;">
+<li class="chapter" data-level="8.1" data-path="notifications-settings.html"><a href="https://info448.github.io/notifications-settings.html#dialogs"><i class="fa fa-check"></i><b>8.1</b> Dialogs</a><ul style="display: none;">
+<li class="chapter" data-level="" data-path="notifications-settings.html"><a href="https://info448.github.io/notifications-settings.html#dialogfragments"><i class="fa fa-check"></i>DialogFragments</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="notifications-settings.html"><a href="https://info448.github.io/notifications-settings.html#notifications"><i class="fa fa-check"></i><b>8.2</b> Notifications</a><ul style="display: none;">
+<li class="chapter" data-level="8.2.1" data-path="notifications-settings.html"><a href="https://info448.github.io/notifications-settings.html#tap-actions"><i class="fa fa-check"></i><b>8.2.1</b> Tap Actions</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="notifications-settings.html"><a href="https://info448.github.io/notifications-settings.html#settings"><i class="fa fa-check"></i><b>8.3</b> Settings</a><ul style="display: none;">
+<li class="chapter" data-level="" data-path="notifications-settings.html"><a href="https://info448.github.io/notifications-settings.html#sharedpreferences"><i class="fa fa-check"></i>SharedPreferences</a></li>
+<li class="chapter" data-level="" data-path="notifications-settings.html"><a href="https://info448.github.io/notifications-settings.html#preference-settings"><i class="fa fa-check"></i>Preference Settings</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="loaders.html"><a href="https://info448.github.io/loaders.html"><i class="fa fa-check"></i><b>9</b> Providers and Loaders</a><ul style="display: none;">
+<li class="chapter" data-level="9.1" data-path="loaders.html"><a href="https://info448.github.io/loaders.html#content-providers-intro"><i class="fa fa-check"></i><b>9.1</b> Content Providers</a></li>
+<li class="chapter" data-level="9.2" data-path="loaders.html"><a href="https://info448.github.io/loaders.html#cursors"><i class="fa fa-check"></i><b>9.2</b> Cursors</a></li>
+<li class="chapter" data-level="9.3" data-path="loaders.html"><a href="https://info448.github.io/loaders.html#loaders"><i class="fa fa-check"></i><b>9.3</b> Loaders</a></li>
+<li class="chapter" data-level="9.4" data-path="loaders.html"><a href="https://info448.github.io/loaders.html#other-provider-actions"><i class="fa fa-check"></i><b>9.4</b> Other Provider Actions</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="files-and-permissions.html"><a href="https://info448.github.io/files-and-permissions.html"><i class="fa fa-check"></i><b>10</b> Files and Permissions</a><ul style="display: none;">
+<li class="chapter" data-level="10.1" data-path="files-and-permissions.html"><a href="https://info448.github.io/files-and-permissions.html#file-storage-locations"><i class="fa fa-check"></i><b>10.1</b> File Storage Locations</a></li>
+<li class="chapter" data-level="10.2" data-path="files-and-permissions.html"><a href="https://info448.github.io/files-and-permissions.html#permissions"><i class="fa fa-check"></i><b>10.2</b> Permissions</a></li>
+<li class="chapter" data-level="10.3" data-path="files-and-permissions.html"><a href="https://info448.github.io/files-and-permissions.html#external-storage"><i class="fa fa-check"></i><b>10.3</b> External Storage</a></li>
+<li class="chapter" data-level="10.4" data-path="files-and-permissions.html"><a href="https://info448.github.io/files-and-permissions.html#internal-storage-cache"><i class="fa fa-check"></i><b>10.4</b> Internal Storage &amp; Cache</a></li>
+<li class="chapter" data-level="10.5" data-path="files-and-permissions.html"><a href="https://info448.github.io/files-and-permissions.html#example-saving-pictures"><i class="fa fa-check"></i><b>10.5</b> Example: Saving Pictures</a><ul style="display: none;">
+<li class="chapter" data-level="10.5.1" data-path="files-and-permissions.html"><a href="https://info448.github.io/files-and-permissions.html#fileproviders"><i class="fa fa-check"></i><b>10.5.1</b> FileProviders</a></li>
+</ul></li>
+<li class="chapter" data-level="10.6" data-path="files-and-permissions.html"><a href="https://info448.github.io/files-and-permissions.html#sharing-files"><i class="fa fa-check"></i><b>10.6</b> Sharing Files</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="databases.html"><a href="https://info448.github.io/databases.html"><i class="fa fa-check"></i><b>11</b> Providers and Databases</a><ul style="display: none;">
+<li class="chapter" data-level="11.1" data-path="databases.html"><a href="https://info448.github.io/databases.html#review-providers-and-loaders"><i class="fa fa-check"></i><b>11.1</b> Review: Providers and Loaders</a></li>
+<li class="chapter" data-level="11.2" data-path="databases.html"><a href="https://info448.github.io/databases.html#sqlite-databases"><i class="fa fa-check"></i><b>11.2</b> SQLite Databases</a></li>
+<li class="chapter" data-level="11.3" data-path="databases.html"><a href="https://info448.github.io/databases.html#implementing-a-contentprovider"><i class="fa fa-check"></i><b>11.3</b> Implementing a ContentProvider</a><ul style="display: none;">
+<li class="chapter" data-level="" data-path="databases.html"><a href="https://info448.github.io/databases.html#uris-and-types"><i class="fa fa-check"></i>URIs and Types</a></li>
+<li class="chapter" data-level="" data-path="databases.html"><a href="https://info448.github.io/databases.html#query-methods"><i class="fa fa-check"></i>Query Methods</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="location.html"><a href="https://info448.github.io/location.html"><i class="fa fa-check"></i><b>12</b> Location</a><ul style="display: none;">
+<li class="chapter" data-level="12.1" data-path="location.html"><a href="https://info448.github.io/location.html#localization-techniques"><i class="fa fa-check"></i><b>12.1</b> Localization Techniques</a><ul style="display: none;">
+<li class="chapter" data-level="" data-path="location.html"><a href="https://info448.github.io/location.html#gps"><i class="fa fa-check"></i>GPS</a></li>
+<li class="chapter" data-level="" data-path="location.html"><a href="https://info448.github.io/location.html#cell-tower-localization"><i class="fa fa-check"></i>Cell Tower Localization</a></li>
+<li class="chapter" data-level="" data-path="location.html"><a href="https://info448.github.io/location.html#wifi-localization"><i class="fa fa-check"></i>WiFi Localization</a></li>
+<li class="chapter" data-level="" data-path="location.html"><a href="https://info448.github.io/location.html#representing-location"><i class="fa fa-check"></i>Representing Location</a></li>
+</ul></li>
+<li class="chapter" data-level="12.2" data-path="location.html"><a href="https://info448.github.io/location.html#android-location"><i class="fa fa-check"></i><b>12.2</b> Android Location</a><ul style="display: none;">
+<li class="chapter" data-level="" data-path="location.html"><a href="https://info448.github.io/location.html#google-play-services"><i class="fa fa-check"></i>Google Play Services</a></li>
+<li class="chapter" data-level="" data-path="location.html"><a href="https://info448.github.io/location.html#accessing-location"><i class="fa fa-check"></i>Accessing Location</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="services.html"><a href="https://info448.github.io/services.html"><i class="fa fa-check"></i><b>13</b> Threads and Services</a><ul style="display: none;">
+<li class="chapter" data-level="13.1" data-path="services.html"><a href="https://info448.github.io/services.html#threads-and-processes"><i class="fa fa-check"></i><b>13.1</b> Threads and Processes</a><ul style="display: none;">
+<li class="chapter" data-level="" data-path="services.html"><a href="https://info448.github.io/services.html#java-threads"><i class="fa fa-check"></i>Java Threads</a></li>
+<li class="chapter" data-level="" data-path="services.html"><a href="https://info448.github.io/services.html#android-threads"><i class="fa fa-check"></i>Android Threads</a></li>
+</ul></li>
+<li class="chapter" data-level="13.2" data-path="services.html"><a href="https://info448.github.io/services.html#intentservices"><i class="fa fa-check"></i><b>13.2</b> IntentServices</a><ul style="display: none;">
+<li class="chapter" data-level="" data-path="services.html"><a href="https://info448.github.io/services.html#the-service-lifecycle"><i class="fa fa-check"></i>The Service Lifecycle</a></li>
+</ul></li>
+<li class="chapter" data-level="13.3" data-path="services.html"><a href="https://info448.github.io/services.html#example-a-music-service"><i class="fa fa-check"></i><b>13.3</b> Example: A Music Service</a><ul style="display: none;">
+<li class="chapter" data-level="" data-path="services.html"><a href="https://info448.github.io/services.html#mediaplayer"><i class="fa fa-check"></i>MediaPlayer</a></li>
+<li class="chapter" data-level="" data-path="services.html"><a href="https://info448.github.io/services.html#creating-a-service"><i class="fa fa-check"></i>Creating a Service</a></li>
+</ul></li>
+<li class="chapter" data-level="13.4" data-path="services.html"><a href="https://info448.github.io/services.html#foreground-services"><i class="fa fa-check"></i><b>13.4</b> Foreground Services</a></li>
+<li class="chapter" data-level="13.5" data-path="services.html"><a href="https://info448.github.io/services.html#bound-services"><i class="fa fa-check"></i><b>13.5</b> Bound Services</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="sensors.html"><a href="https://info448.github.io/sensors.html"><i class="fa fa-check"></i><b>14</b> Sensors</a><ul style="display: none;">
+<li class="chapter" data-level="14.1" data-path="sensors.html"><a href="https://info448.github.io/sensors.html#motion-sensors"><i class="fa fa-check"></i><b>14.1</b> Motion Sensors</a><ul style="display: none;">
+<li class="chapter" data-level="" data-path="sensors.html"><a href="https://info448.github.io/sensors.html#accessing-sensors"><i class="fa fa-check"></i>Accessing Sensors</a></li>
+<li class="chapter" data-level="" data-path="sensors.html"><a href="https://info448.github.io/sensors.html#composite-sensors"><i class="fa fa-check"></i>Composite Sensors</a></li>
+</ul></li>
+<li class="chapter" data-level="14.2" data-path="sensors.html"><a href="https://info448.github.io/sensors.html#rotation"><i class="fa fa-check"></i><b>14.2</b> Rotation</a><ul style="display: none;">
+<li class="chapter" data-level="" data-path="sensors.html"><a href="https://info448.github.io/sensors.html#coordinates"><i class="fa fa-check"></i>Coordinates</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="graphics.html"><a href="https://info448.github.io/graphics.html"><i class="fa fa-check"></i><b>15</b> Graphics and Touch</a><ul style="display: none;">
+<li class="chapter" data-level="15.1" data-path="graphics.html"><a href="https://info448.github.io/graphics.html#drawing-graphics"><i class="fa fa-check"></i><b>15.1</b> Drawing Graphics</a><ul style="display: none;">
+<li class="chapter" data-level="" data-path="graphics.html"><a href="https://info448.github.io/graphics.html#custom-views"><i class="fa fa-check"></i>Custom Views</a></li>
+<li class="chapter" data-level="" data-path="graphics.html"><a href="https://info448.github.io/graphics.html#surfaceviews"><i class="fa fa-check"></i>SurfaceViews</a></li>
+</ul></li>
+<li class="chapter" data-level="15.2" data-path="graphics.html"><a href="https://info448.github.io/graphics.html#touch-and-gestures"><i class="fa fa-check"></i><b>15.2</b> Touch and Gestures</a><ul style="display: none;">
+<li class="chapter" data-level="" data-path="graphics.html"><a href="https://info448.github.io/graphics.html#advanced-gestures"><i class="fa fa-check"></i>Advanced Gestures</a></li>
+</ul></li>
+<li class="chapter" data-level="15.3" data-path="graphics.html"><a href="https://info448.github.io/graphics.html#property-animation"><i class="fa fa-check"></i><b>15.3</b> Property Animation</a></li>
+</ul></li>
+<li class="part"><span><b>II Additional Topics (Labs)</b></span></li>
+<li class="chapter" data-level="16" data-path="styles-themes.html"><a href="https://info448.github.io/styles-themes.html"><i class="fa fa-check"></i><b>16</b> Styles &amp; Themes</a><ul style="display: none;">
+<li class="chapter" data-level="16.1" data-path="styles-themes.html"><a href="https://info448.github.io/styles-themes.html#defining-styles"><i class="fa fa-check"></i><b>16.1</b> Defining Styles</a><ul style="display: none;">
+<li class="chapter" data-level="" data-path="styles-themes.html"><a href="https://info448.github.io/styles-themes.html#style-inheritance"><i class="fa fa-check"></i>Style Inheritance</a></li>
+<li class="chapter" data-level="" data-path="styles-themes.html"><a href="https://info448.github.io/styles-themes.html#built-in-styles"><i class="fa fa-check"></i>Built-in Styles</a></li>
+<li class="chapter" data-level="" data-path="styles-themes.html"><a href="https://info448.github.io/styles-themes.html#styles-for-text-views"><i class="fa fa-check"></i>Styles for Text Views</a></li>
+</ul></li>
+<li class="chapter" data-level="16.2" data-path="styles-themes.html"><a href="https://info448.github.io/styles-themes.html#themes"><i class="fa fa-check"></i><b>16.2</b> Themes</a><ul style="display: none;">
+<li class="chapter" data-level="" data-path="styles-themes.html"><a href="https://info448.github.io/styles-themes.html#material-themes"><i class="fa fa-check"></i>Material Themes</a></li>
+<li class="chapter" data-level="" data-path="styles-themes.html"><a href="https://info448.github.io/styles-themes.html#theme-attributes"><i class="fa fa-check"></i>Theme Attributes</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="styles-themes.html"><a href="https://info448.github.io/styles-themes.html#resources-2"><i class="fa fa-check"></i>Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="fragment-viewpager.html"><a href="https://info448.github.io/fragment-viewpager.html"><i class="fa fa-check"></i><b>17</b> Fragments: ViewPager</a><ul style="display: none;">
+<li class="chapter" data-level="17.1" data-path="fragment-viewpager.html"><a href="https://info448.github.io/fragment-viewpager.html#define-a-searchfragment"><i class="fa fa-check"></i><b>17.1</b> Define a SearchFragment</a></li>
+<li class="chapter" data-level="17.2" data-path="fragment-viewpager.html"><a href="https://info448.github.io/fragment-viewpager.html#add-the-viewpager-and-adapter"><i class="fa fa-check"></i><b>17.2</b> Add the ViewPager and Adapter</a></li>
+<li class="chapter" data-level="17.3" data-path="fragment-viewpager.html"><a href="https://info448.github.io/fragment-viewpager.html#add-user-interaction"><i class="fa fa-check"></i><b>17.3</b> Add User Interaction</a></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="bluetooth.html"><a href="https://info448.github.io/bluetooth.html"><i class="fa fa-check"></i><b>18</b> Bluetooth</a></li>
+<li class="chapter" data-level="19" data-path="maps.html"><a href="https://info448.github.io/maps.html"><i class="fa fa-check"></i><b>19</b> Maps</a><ul style="display: none;">
+<li class="chapter" data-level="19.1" data-path="maps.html"><a href="https://info448.github.io/maps.html#create-a-map-activity"><i class="fa fa-check"></i><b>19.1</b> Create a Map Activity</a><ul style="display: none;">
+<li class="chapter" data-level="" data-path="maps.html"><a href="https://info448.github.io/maps.html#getting-an-api-key"><i class="fa fa-check"></i>Getting an API Key</a></li>
+<li><a href="https://info448.github.io/maps.html#the-supportmapfragment">The <code>SupportMapFragment</code></a></li>
+</ul></li>
+<li class="chapter" data-level="19.2" data-path="maps.html"><a href="https://info448.github.io/maps.html#specifying-the-user-interface"><i class="fa fa-check"></i><b>19.2</b> Specifying the User Interface</a></li>
+<li class="chapter" data-level="19.3" data-path="maps.html"><a href="https://info448.github.io/maps.html#markers-and-drawings"><i class="fa fa-check"></i><b>19.3</b> Markers and Drawings</a><ul style="display: none;">
+<li class="chapter" data-level="" data-path="maps.html"><a href="https://info448.github.io/maps.html#drawing-shapes"><i class="fa fa-check"></i>Drawing Shapes</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="20" data-path="memory.html"><a href="https://info448.github.io/memory.html"><i class="fa fa-check"></i><b>20</b> Memory Management</a><ul style="display: none;">
+<li class="chapter" data-level="20.1" data-path="memory.html"><a href="https://info448.github.io/memory.html#memory-allocation"><i class="fa fa-check"></i><b>20.1</b> Memory Allocation</a></li>
+<li class="chapter" data-level="20.2" data-path="memory.html"><a href="https://info448.github.io/memory.html#the-memory-monitor"><i class="fa fa-check"></i><b>20.2</b> The Memory Monitor</a><ul style="display: none;">
+<li class="chapter" data-level="" data-path="memory.html"><a href="https://info448.github.io/memory.html#garbage-collection"><i class="fa fa-check"></i>Garbage Collection</a></li>
+</ul></li>
+<li class="chapter" data-level="20.3" data-path="memory.html"><a href="https://info448.github.io/memory.html#memory-leaks"><i class="fa fa-check"></i><b>20.3</b> Memory Leaks</a></li>
+</ul></li>
+<li class="chapter" data-level="21" data-path="multi-touch.html"><a href="https://info448.github.io/multi-touch.html"><i class="fa fa-check"></i><b>21</b> Multi-Touch</a><ul style="display: none;">
+<li class="chapter" data-level="21.1" data-path="multi-touch.html"><a href="https://info448.github.io/multi-touch.html#identifying-fingers"><i class="fa fa-check"></i><b>21.1</b> Identifying Fingers</a></li>
+<li class="chapter" data-level="21.2" data-path="multi-touch.html"><a href="https://info448.github.io/multi-touch.html#drawing-touches"><i class="fa fa-check"></i><b>21.2</b> Drawing Touches</a></li>
+<li class="chapter" data-level="21.3" data-path="multi-touch.html"><a href="https://info448.github.io/multi-touch.html#moving-fingers"><i class="fa fa-check"></i><b>21.3</b> Moving Fingers</a></li>
+<li class="chapter" data-level="21.4" data-path="multi-touch.html"><a href="https://info448.github.io/multi-touch.html#other-multi-touch-gestures"><i class="fa fa-check"></i><b>21.4</b> Other Multi-Touch Gestures</a></li>
+</ul></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="java-review.html"><a href="https://info448.github.io/java-review.html"><i class="fa fa-check"></i><b>A</b> Java Review</a><ul style="display: none;">
+<li class="chapter" data-level="A.1" data-path="java-review.html"><a href="https://info448.github.io/java-review.html#building-apps-with-gradle"><i class="fa fa-check"></i><b>A.1</b> Building Apps with Gradle</a></li>
+<li class="chapter" data-level="A.2" data-path="java-review.html"><a href="https://info448.github.io/java-review.html#class-basics"><i class="fa fa-check"></i><b>A.2</b> Class Basics</a></li>
+<li class="chapter" data-level="A.3" data-path="java-review.html"><a href="https://info448.github.io/java-review.html#inheritance"><i class="fa fa-check"></i><b>A.3</b> Inheritance</a></li>
+<li class="chapter" data-level="A.4" data-path="java-review.html"><a href="https://info448.github.io/java-review.html#interfaces"><i class="fa fa-check"></i><b>A.4</b> Interfaces</a></li>
+<li class="chapter" data-level="A.5" data-path="java-review.html"><a href="https://info448.github.io/java-review.html#polymorphism"><i class="fa fa-check"></i><b>A.5</b> Polymorphism</a></li>
+<li class="chapter" data-level="A.6" data-path="java-review.html"><a href="https://info448.github.io/java-review.html#abstract-methods-and-classes"><i class="fa fa-check"></i><b>A.6</b> Abstract Methods and Classes</a></li>
+<li class="chapter" data-level="A.7" data-path="java-review.html"><a href="https://info448.github.io/java-review.html#generics"><i class="fa fa-check"></i><b>A.7</b> Generics</a></li>
+<li class="chapter" data-level="A.8" data-path="java-review.html"><a href="https://info448.github.io/java-review.html#nested-classes"><i class="fa fa-check"></i><b>A.8</b> Nested Classes</a></li>
+</ul></li>
+<li class="chapter" data-level="B" data-path="java-swing.html"><a href="https://info448.github.io/java-swing.html"><i class="fa fa-check"></i><b>B</b> Java Swing Framework</a><ul style="display: none;">
+<li class="chapter" data-level="B.1" data-path="java-swing.html"><a href="https://info448.github.io/java-swing.html#events"><i class="fa fa-check"></i><b>B.1</b> Events</a></li>
+<li class="chapter" data-level="B.2" data-path="java-swing.html"><a href="https://info448.github.io/java-swing.html#layouts-and-composites"><i class="fa fa-check"></i><b>B.2</b> Layouts and Composites</a></li>
+</ul></li>
+<li class="chapter" data-level="C" data-path="publishing.html"><a href="https://info448.github.io/publishing.html"><i class="fa fa-check"></i><b>C</b> Publishing</a><ul style="display: none;">
+<li class="chapter" data-level="C.1" data-path="publishing.html"><a href="https://info448.github.io/publishing.html#signing-an-app"><i class="fa fa-check"></i><b>C.1</b> Signing an App</a><ul style="display: none;">
+<li><a href="https://info448.github.io/publishing.html#release-.apk">Release <code>.apk</code></a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body fixed">
+      <div class="body-inner">
+        <div class="book-header fixed" role="navigation" style="background-color: rgb(255, 255, 255);">
+          <a class="btn pull-left js-toolbar-action" aria-label="" href="https://info448.github.io/resources-and-layouts.html#"><i class="fa fa-align-justify"></i></a><a class="btn pull-left js-toolbar-action" aria-label="Search" href="https://info448.github.io/resources-and-layouts.html#"><i class="fa fa-search"></i></a><div class="dropdown pull-right  js-toolbar-action"><a class="btn toggle-dropdown" aria-label="Share" href="https://info448.github.io/resources-and-layouts.html#"><i class="fa fa-share-alt"></i></a><div class="dropdown-menu dropdown-left"><div class="dropdown-caret"><span class="caret-outer"></span><span class="caret-inner"></span></div><div class="buttons"><button class="button size-4 ">Github</button><button class="button size-4 ">Facebook</button><button class="button size-4 ">Twitter</button><button class="button size-4 ">Google+</button></div></div></div><a class="btn pull-right js-toolbar-action" aria-label="" href="https://info448.github.io/resources-and-layouts.html#"><i class="fa fa-github"></i></a><div class="dropdown pull-left font-settings js-toolbar-action"><a class="btn toggle-dropdown" aria-label="Font Settings" href="https://info448.github.io/resources-and-layouts.html#"><i class="fa fa-font"></i></a><div class="dropdown-menu dropdown-right"><div class="dropdown-caret"><span class="caret-outer"></span><span class="caret-inner"></span></div><div class="buttons"><button class="button size-2 font-reduce">A</button><button class="button size-2 font-enlarge">A</button></div><div class="buttons"><button class="button size-2 ">Serif</button><button class="button size-2 ">Sans</button></div><div class="buttons"><button class="button size-3 ">White</button><button class="button size-3 ">Sepia</button><button class="button size-3 ">Night</button></div></div></div><a class="btn pull-left js-toolbar-action" aria-label="Edit" href="https://info448.github.io/resources-and-layouts.html#"><i class="fa fa-edit"></i></a><div class="dropdown pull-left  js-toolbar-action"><a class="btn toggle-dropdown" aria-label="Download" href="https://info448.github.io/resources-and-layouts.html#"><i class="fa fa-download"></i></a><div class="dropdown-menu dropdown-right"><div class="dropdown-caret"><span class="caret-outer"></span><span class="caret-inner"></span></div><div class="buttons"><button class="button size-1 ">PDF</button></div><div class="buttons"><button class="button size-1 ">EPUB</button></div></div></div><h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="https://info448.github.io/">Android Development: Lecture Notes</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="resources-and-layouts" class="section level1">
+<h1><span class="header-section-number">Lecture 2</span> Resources and Layouts</h1>
+<p>This lecture discusses <a href="https://developer.android.com/guide/topics/resources/overview.html"><strong>Resources</strong></a>, which are used to represent elements or data that are separate from the behavior (functional logic) of an app. In particular, this lecture focuses on how resources are used to define <strong>Layouts</strong> for user interfaces. This lecture focuses on the XML-based source code in an Android app; the <a href="https://info448.github.io/activities.html#activities">Activities</a> lecture begins to detail the source code written in Java.</p>
+<p class="alert alert-info">
+This lecture references code found at <a href="https://github.com/info448/lecture02-layouts" class="uri">https://github.com/info448/lecture02-layouts</a>.
+</p>
+<div id="resources" class="section level2">
+<h2><span class="header-section-number">2.1</span> Resources</h2>
+<p><a href="https://developer.android.com/guide/topics/resources/overview.html">Resources</a> can be found in the <strong><code>res/</code></strong> folder, and represent elements or data that are “external” to the code. You can think of them as “media content”: often images, but also things like text clippings (or short String constants), usually defined in XML files. Resources represent components that are <em>separate</em> from the app’s behavior, so are kept separate from the Java code to support the <strong>Principle of Separation of Concerns</strong></p>
+<ul>
+<li><p>By defining resources in XML, they can be developed (worked on) <em>without</em> coding tools (e.g., with systems like the graphical “design” tab in Android Studio). Theoretically you could have a Graphic Designer create these resources, which can then be integrated into the code without the designer needing to do a lick of Java.</p></li>
+<li><p>Similarly, keeping resources separate allows you to choose what resources to include <em>dynamically</em>. You can choose to show different images based on device screen resolution, or pick different Strings based on the language of the device (internationalization!)—the behavior of the app is the same, but the “content” is different!</p></li>
+</ul>
+<p>What should be a resource? In general:</p>
+<ul>
+<li>Layouts should <strong>always</strong> be defined as resources</li>
+<li>UI controls (buttons, etc) should <em>mostly</em> be defined as resources (they are part of layouts), though behavior will be defined programmatically in Java</li>
+<li>Any graphic images (drawables) should be defined as resources</li>
+<li>Any <em>user-facing</em> strings should be defined as resources</li>
+<li>Style and theming information should be defined as resources</li>
+</ul>
+<p>As introduced in <a href="https://info448.github.io/introduction.html#introduction">Lecture 1</a>, there are a number of different <a href="https://developer.android.com/guide/topics/resources/available-resources.html">resource types</a> used in Android, and which can be found in the <code>res/</code> folder of a default Android project, including:</p>
+<div class="list-condensed">
+<ul>
+<li><code>res/drawable/</code>: contains graphics (PNG, JPEG, etc)</li>
+<li><code>res/layout/</code>: contains UI XML layout files</li>
+<li><code>res/mipmap/</code>: contains launcher icon files in different resolutions</li>
+<li><code>res/values/</code>: contains XML definitions for general constants, which can include:
+<ul>
+<li><code>/strings.xml</code>: short string constants (e.g., button labels)</li>
+<li><code>/colors.xml</code>: color constants</li>
+<li><code>/styles.xml</code> : constants for <a href="https://developer.android.com/guide/topics/ui/themes.html">style and theme</a> details</li>
+<li><code>/dimen.xml</code> : dimensional constants (like default margins); not created by default in Android Studio 2.3+.</li>
+</ul></li>
+</ul>
+</div>
+<p>The details about these different kinds of resources is a bit scattered throughout the documentation, but <a href="http://developer.android.com/guide/topics/resources/available-resources.html">Resource Types</a><a href="https://info448.github.io/resources-and-layouts.html#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a> is a good place to start, as is <a href="https://developer.android.com/guide/topics/resources/providing-resources.html#ResourceTypes">Providing Resources</a>.</p>
+<div id="r" class="section level3 unnumbered">
+<h3>R</h3>
+<p>Resources are usually defined as <a href="https://en.wikipedia.org/wiki/XML">XML</a> (which is similar in syntax to HTML). When an application is compiled, the build tools (e.g., Gradle) will <strong>generate</strong> an additional Java class called <strong><code>R</code></strong> (for “resource”). This class contains what is basically a giant list of static “constants”—at least one for each XML element.</p>
+<p>For example, consider the <code>strings.xml</code> resource, which is used to define String constants. The provided <code>strings.xml</code> defines two constants of type <code>&lt;string&gt;</code>. The <code>name</code> attribute specifies the name that the variable will take, and the content of the element gives that variable’s value. Thus</p>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;string</span><span class="ot"> name=</span><span class="st">"app_name"</span><span class="kw">&gt;</span>Layout Demo<span class="kw">&lt;/string&gt;</span>
+<span class="kw">&lt;string</span><span class="ot"> name=</span><span class="st">"greeting"</span><span class="kw">&gt;</span>Hello Android!<span class="kw">&lt;/string&gt;</span></code></pre></div>
+<p>will in effect be compiled into constants similar to:</p>
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="kw">public</span> <span class="dt">static</span> <span class="dt">final</span> <span class="bu">String</span> app_name = <span class="st">"My Application"</span>;
+<span class="kw">public</span> <span class="dt">static</span> <span class="dt">final</span> <span class="bu">String</span> greeting = <span class="st">"Hello Android!"</span>;</code></pre></div>
+<p>All of the resource constants are compiled into <em>inner classes</em> inside <code>R</code>, one for each resource type. So an <code>R</code> file containing the above strings would be structured like:</p>
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="kw">public</span> <span class="kw">class</span> R {
+    <span class="kw">public</span> <span class="dt">static</span> <span class="kw">class</span> string {
+        <span class="kw">public</span> <span class="dt">static</span> <span class="dt">final</span> <span class="bu">String</span> app_name = <span class="st">"My Application"</span>;
+        <span class="kw">public</span> <span class="dt">static</span> <span class="dt">final</span> <span class="bu">String</span> greeting = <span class="st">"Hello Android!"</span>;
+    }
+}</code></pre></div>
+<p>This allows you to use <strong>dot notation</strong> to refer to each resource based on its type (e.g., <code>R.string.greeting</code>)—similar to the syntax used to refer to nested JSON objects!</p>
+<ul>
+<li><p>For most resources, the identifier is defined as an element attribute (<code>name</code> attribute for values like Strings; <code>id</code> for specific View elements in layouts). For more complex resources such as entire layouts or drawables, the identifier is the <em>filename</em> (without the file extension): for example <code>R.layout.activity_main</code> refers to the root element of the <code>layout/activity_main.xml</code> file.</p></li>
+<li><p>More generally, each resource can be referred to with <code>[(package_name).]R.resource_type.identifier</code>.</p></li>
+<li><p>Note that the file name <code>string.xml</code> is just a convention for readability; all children of a <code>&lt;resource&gt;</code> element are compiled into <code>R</code> dependent on their type, not their source code location. So it is possible to have lots of different resource files, depending on your needs. The <code>robot_list.xml</code> file is not a standard resource.</p></li>
+</ul>
+<p class="alert alert-info">
+You can find the generated <code>R.java</code> file inside <code>app/build/generated/source/r/debug/...</code> (Use the Project Files view in Android Studio).
+</p>
+<p>If you actually open the <code>R.java</code> file, you’ll see that the static constants are actually just <strong><code>int</code></strong> values that are <em>pointers</em> to element references (similar to passing a <code>pointer*</code> around in the C language); the content of the value is stored elsewhere (so it can be adjusted at runtime; see below). This does mean that in our Java code we usually work with <code>int</code> as the data type for XML resources such as Strings, because we’re actually working with pointers <em>to</em> those resources.</p>
+<ul>
+<li><p>For example, the <code>setContentView()</code> call in an Activity’s <code>onCreate()</code> takes in a resource <code>int</code>.</p></li>
+<li><p>You can think of each <code>int</code> constant as a “key” or “index” for that resource (in the list of all resources). Android does the hard work of taking that <code>int</code>, looking it up in an internal resource table, finding the associated XML file, and then getting the right element out of that XML. (By hard work, I mean in terms of implementation. Android is looking up these references directly in memory, so the look-up is fast).</p></li>
+</ul>
+<p>Because the <code>R</code> class is included in the Java, we can access these <code>int</code> constants directly in our code (as <code>R.resource_type.identifier</code>), as in the <code>setContentView()</code> method. However, if you want to actually get the String value, you can look that up by using the application’s <code>Resources()</code> object:</p>
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="bu">Resources</span> res = <span class="kw">this</span>.<span class="fu">getResources</span>(); <span class="co">//get access to application's resources</span>
+<span class="bu">String</span> myString = res.<span class="fu">getString</span>(R.<span class="fu">string</span>.<span class="fu">myString</span>); <span class="co">//look up value of that resource</span></code></pre></div>
+<ul>
+<li><p>The other common method that utilizes resources will be <code>findViewById(int)</code>, which is used to reference a <code>View</code> element (e.g., a button) specified in a layout resource in order to call methods on it in Java, as in the example from the previous lecture.</p>
+<p class="alert alert-info">
+The <a href="https://kotlinlang.org/docs/tutorials/android-plugin.html">Kotlin Android Extension</a> will allow you to <code>import</code> layouts directly into Kotlin, so you don’t need to use <code>findViewById()</code>.
+</p></li>
+</ul>
+<p class="alert alert-warning">
+The <code>R</code> class is regenerated all time (any time you change a resource, which is often); when Eclipse was the recommend Android IDE, you often needed to manually regenerate the class so that the IDE’s index would stay up to date! You can perform a similar task in Android Studio by using <code>Build &gt; Clean Project</code> and <code>Build &gt; Rebuild Project</code>.
+</p>
+<p>It is also possible to reference one resource from another within the XML using the <strong><code>@</code></strong> symbol, following the schema <code>@[&lt;package_name&gt;:]&lt;resource_type&gt;/&lt;resource_name&gt;</code>. For example, in the Manifest you can see that the application’s label is referred to via <code>@string/app_name</code>.</p>
+<ul>
+<li>You can also use the <strong><code>+</code></strong> symbol to create a <em>new</em> resource that we can refer to; this is a bit like declaring a variable inside an XML attribute. This is most commonly used with the <code>android:id</code> attribute (<code>android:id="@+id/identifier"</code>) to create a variable referring to that View; see below for details.</li>
+</ul>
+</div>
+<div id="alternative-resources" class="section level3 unnumbered">
+<h3>Alternative Resources</h3>
+<p>One main advantage to separating resources from the Java code is that it allows them to be <strong>localized</strong> and changed depending on the device! Android allows the developer to specify folders for <a href="https://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources">“alternative” resources</a>, such as for different languages or device screen resolutions. <strong>At runtime</strong>, Android will check the configuration of the device, and try to find an alternative resource that matches that configuration. If it it <em>can’t</em> find a relevant alternative resource, it will fall back to the “default” resource.</p>
+<p>There are many different configurations that can be used to influence resources; see <a href="https://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources">Providing Resources</a><a href="https://info448.github.io/resources-and-layouts.html#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a>. To highlight a few options, you can specify different resources based on:</p>
+<div class="list-condensed">
+<ul>
+<li>Language and region (e.g., via two-letter ISO codes)</li>
+<li>Screen size(<code>small</code>, <code>normal</code>, <code>medium</code>, <code>large</code>, <code>xlarge</code>)</li>
+<li>Screen orientation (<code>port</code> for portrait, <code>land</code> for landscape)</li>
+<li>Specific screen pixel density (dpi) (<code>ldpi</code>, <code>mdpi</code>, <code>hdpi</code>, <code>xhdpi</code>, <code>xxhdpi</code>, etc.). <code>xxhdpi</code> is pretty common for high-end devices. Note that dpi is “dots per inch”, so these values represent the number of pixels <em>relative</em> to the device size!</li>
+<li>Platform version (<code>v1</code>, <code>v4</code>, <code>v7</code>… for each API number)</li>
+</ul>
+</div>
+<p>Configurations are indicated using the <strong>directory name</strong>, giving folders the form <code>&lt;resource_name&gt;(-&lt;config_qualifier&gt;)+</code>. For example, the <code>values-fr/</code> would contain constant values for devices with a French language configuration.</p>
+<ul>
+<li><p>Importantly, the resource file itself should to be the <em>same</em> for both the qualifier and unqualified resource name (e.g., <code>values/strings.xml</code> and <code>values-fr/strings.xml</code>). This is because Android will load the file inside the qualified resource if it matches the device’s configuration <em>in place of</em> the “default” unqualified resource. The names need to be the same so one can replace the other!</p></li>
+<li><p>You can see this in action by using the <em>New Resource</em> wizard (<code>File &gt; New &gt; Android resource file</code>) to create a string resource (such as for the <code>app_name</code>) in <a href="https://www.webucator.com/blog/2010/03/saying-hello-world-in-your-language-using-javascript/">another language</a>. Change the device’s language settings (via the device’s <code>Settings &gt; Language &amp; Input &gt; Language</code>) to see the content automatically adjust!</p>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;?xml</span> version="1.0" encoding="utf-8"<span class="kw">?&gt;</span>
+<span class="kw">&lt;resources&gt;</span>
+    <span class="kw">&lt;string</span><span class="ot"> name=</span><span class="st">"app_name"</span><span class="kw">&gt;</span>Mon Application<span class="kw">&lt;/string&gt;</span>
+<span class="kw">&lt;/resources&gt;</span></code></pre></div></li>
+<li><p>You can view the directory structure that supports this by switching to the <code>Package</code> project view in Android Studio.</p></li>
+</ul>
+</div>
+</div>
+<div id="views" class="section level2">
+<h2><span class="header-section-number">2.2</span> Views</h2>
+<p>The most common type of element you’ll define as a resource are <a href="https://developer.android.com/reference/android/view/View.html"><strong>Views</strong></a><a href="https://info448.github.io/resources-and-layouts.html#fn4" class="footnoteRef" id="fnref4"><sup>4</sup></a>. <code>View</code> is the superclass for visual interface elements—a visual component on the screen is a View. Specific types of Views include: <a href="https://developer.android.com/reference/android/widget/TextView.html">TextViews</a>, <a href="https://developer.android.com/reference/android/widget/ImageView.html">ImageViews</a>, <a href="https://developer.android.com/reference/android/widget/Button.html">Buttons</a>, etc.</p>
+<ul>
+<li><code>View</code> is a superclass for these components because it allows us to use <strong>polymorphism</strong> to treat all these visual elements as instances of the same type. We can lay them out, draw them, click on them, move them, etc. And all the behavior will be the same (though subclasses can also have “extra” features).</li>
+</ul>
+<p>Here’s the big trick: one subclass of <code>View</code> is <a href="https://developer.android.com/reference/android/view/ViewGroup.html"><code>ViewGroup</code></a><a href="https://info448.github.io/resources-and-layouts.html#fn5" class="footnoteRef" id="fnref5"><sup>5</sup></a>. A <code>ViewGroup</code> is a View can contain other “child” Views. But since <code>ViewGroup</code> is a <code>View</code>… it can contain more <code>ViewGroups</code> inside it! Thus we can <strong>nest</strong> Views within Views, following the <a href="http://www.oodesign.com/composite-pattern.html">Composite Pattern</a>. This ends up working a lot like HTML (which can have DOM elements like <code>&lt;div&gt;</code> inside other DOM elements), allowing for complex user interfaces.</p>
+<ul>
+<li>Like the HTML DOM, Android Views are thus structured into a <a href="https://en.wikipedia.org/wiki/Tree_(data_structure)"><em>tree</em></a>, what is known as the <strong>View hierarchy</strong>.</li>
+</ul>
+<p>Views are defined inside of <a href="https://developer.android.com/guide/topics/ui/declaring-layout.html">Layouts</a>—that is, inside a layout resource, which is an XML file describing Views. These resources are <em>“inflated”</em> (rendered) into UI objects that are part of the application.</p>
+<p>Technically, a <code>Layout</code> is simply a <code>ViewGroup</code> that provide “ordering” and “positioning” information for the Views inside of it. Layouts let the system “lay out” the Views intelligently and effectively. <em>Individual views shouldn’t know their own position</em>; this follows from good good object-oriented design and keeps the Views encapsulated.</p>
+<p class="alert alert-info">
+Android studio does come with a graphical <a href="https://developer.android.com/studio/write/layout-editor.html">Layout Editor</a> (the “Design” tab) that can be used to create layouts. However, most developers stick with writing layouts in XML. This is mostly because early design tools were pathetic and unusable, so XML was all we had. Although Android Studio’s graphical editor can be effective, for this course you should create layouts “by hand” in XML. This is helpful for making sure you understand the pieces underlying development, and is a skill you should be comfortable with anyway (similar to how we encourage people to use <code>git</code> from the command-line).
+</p>
+<div id="view-properties" class="section level3 unnumbered">
+<h3>View Properties</h3>
+<p>Before we get into how to group Views, let’s focus on the individual, basic <code>View</code> classes. As an example, consider the <code>activity_main</code> layout in the lecture code. This layout contains two individual <code>View</code> elements (inside a <code>Layout</code>): a <code>TextView</code> and a <code>Button</code>.</p>
+<p>All View have <strong>properties</strong> which define the state of the View. Properties are usually specified within the resource XML as element <em>attributes</em>. Some examples of these property attributes are described below.</p>
+<ul>
+<li><p><strong><code>android:id</code></strong> specifies a unique identifier for the View. This identifier needs to be unique within the layout, though ideally is unique within the entire app for clarity.</p>
+<p>The <code>@+</code> syntax is used to define a <em>new</em> View <code>id</code> resource—almost like you are declaring a variable inside the element attribute! You will need to use the <code>@+</code> whenever you specify a new <code>id</code>, which will allow it to be referenced either from the Java code (as <code>R.id.identifier</code>) or by other XML resources (as <code>@id/identifier</code>).</p>
+<p>Identifiers must be legal Java variable names (because they are turned into a variable name in the <code>R</code> class), and by convention are named in <code>lower_case</code> format.</p>
+<ul>
+<li><em>Style tip</em>: it is useful to prefix each View’s id with its type (e.g., <code>btn</code>, <code>txt</code>, <code>edt</code>). This helps with making the code self-documenting!</li>
+</ul>
+<p>You should give each interactive <code>View</code> a unique id, which will allow its state to automatically be saved when the Activity is destroyed. See <a href="https://developer.android.com/guide/components/activities/activity-lifecycle.html#saras">here</a> for details.</p></li>
+<li><p><strong><code>android:layout_width</code></strong> and <strong><code>android:layout_height</code></strong> are used to specify the View’s size on the screen (see <a href="http://developer.android.com/reference/android/view/ViewGroup.LayoutParams.html">ViewGroup.LayoutParams</a> for documentation). These values can be a specific value (e.g., <code>12dp</code>), but more commonly are one of two special values:</p>
+<ul>
+<li><code>wrap_content</code>, meaning the dimension should be as large as the content requires, plus padding.</li>
+<li><code>match_parent</code>, meaning the dimension should be as large as the <em>parent</em> (container) element, minus padding. This value was renamed from <code>fill_parent</code> (which has now been deprecated).</li>
+</ul></li>
+</ul>
+<div class="alert alert-info">
+<p>Android utilizes the following <a href="https://developer.android.com/guide/topics/resources/more-resources.html#Dimension">dimensions</a> or <a href="https://www.google.com/design/spec/layout/units-measurements.html#">units</a>:</p>
+<ul>
+<li><strong><code>dp</code></strong> is a “density-independent pixel”. On a 160-dpi (dots-per-inch) screen, <code>1dp</code> equals <code>1px</code> (pixel). But as dpi increases, the number of pixels per <code>dp</code> increases. These values should be used instead of <code>px</code>, as it allows dimensions to work independent of the hardware’s dpi (which is <em>highly</em> variable).</li>
+<li><strong><code>px</code></strong> is an actual screen pixel. <em>DO NOT USE THIS</em> (use <code>dp</code> instead!)</li>
+<li><strong><code>sp</code></strong> is a “scale-independent pixel”. This value is like <code>dp</code>, but is scaled by the system’s font preference (e.g., if the user has selected that the device should display in a larger font, <code>1sp</code> will cover more <code>dp</code>). <em>You should <strong>always</strong> use <code>sp</code> for text dimensions, in order to support user preferences and accessibility.</em></li>
+<li><strong><code>pt</code></strong> is 1/72 of an inch of the physical screen. Similar units <code>mm</code> and <code>in</code> are available. <em>Not recommended for use.</em></li>
+</ul>
+</div>
+<ul>
+<li><p><strong><code>android:padding</code></strong>, <strong><code>android:paddingLeft</code></strong>, <strong><code>android:margin</code></strong>, <strong><code>android:marginLeft</code></strong>, etc. are used to specify the margin and padding for Views. These work basically the same way they do in CSS: padding is the space between the content and the “edge” of the View, and margin is the space between Views. Note that unlike CSS, margins between elements do not collapse.</p></li>
+<li><p><strong><code>android:textSize</code></strong> specifies the “font size” of textual Views (use <code>sp</code> units!), <strong><code>android:textColor</code></strong> specifies the color of text (best practice: reference a color resource!), etc.</p></li>
+<li><p>There are lots of other properties as well! You can see a listing of generic properties in the <a href="https://developer.android.com/reference/android/view/View.html#lattrs"><code>View</code></a><a href="https://info448.github.io/resources-and-layouts.html#fn6" class="footnoteRef" id="fnref6"><sup>6</sup></a> documentation, look at the options in the “Design” tab of Android Studio, or browse the auto-complete options in the IDE. Each different <code>View</code> class (e.g., <code>TextView</code>, <code>ImageView</code>, etc.) will also have their own set of properties.</p></li>
+</ul>
+<p>Note that unlike CSS, styling properties specified in the layout XML resources are <em>not</em> inherited: you’re effectively specifying an inline <code>style</code> attribute for that element, and one that won’t affect child elements. In order to define shared style properties, you’ll need to use <a href="https://developer.android.com/guide/topics/ui/themes.html#DefiningStyles">styles resources</a>, which are discussed in a later lecture.</p>
+</div>
+<div id="views-and-java" class="section level3 unnumbered">
+<h3>Views and Java</h3>
+<p>Displaying a View on a screen is called <strong>inflating</strong> that View. The process is called “inflating” based on the idea that it is “unpacking” or “expanding” a compact resource description into a complex Java Object. When a View is inflated, it is instantiate as an object: the inflation process changes the <code>&lt;Button&gt;</code> XML into a <code>new Button()</code> object in Java, with the property attributes passed as a <a href="https://developer.android.com/reference/android/view/View.html#View(android.content.Context,%20android.util.AttributeSet)">parameter to that constructor</a>. Thus you can think of each XML element as representing a particular Java Object that will be instantiated and referenced at runtime.</p>
+<ul>
+<li>This is almost exactly like how JSX components in React are individual objects!</li>
+<li>Remember that you can get a reference to these objects from the Java code using the <code>findViewById()</code> method.</li>
+</ul>
+<p>Once you have a reference to a View object in Java, it is possible to specify visual properties dynamically via Java methods (e.g., <code>setText()</code>, <code>setPadding()</code>). However, you should <strong>only</strong> use Java methods to specify View properties when they <em>need</em> to be dynamic (e.g., the text changes in response to a button click)—it is much cleaner and effective to specify as much visual detail in the XML resource files as possible. It’s also possible to dynamically replace one layout resource with another (see below).</p>
+<ul>
+<li><p>Views also have inspection methods such as <code>isVisible()</code> and <code>hasFocus()</code> if you need to check the View’s state.</p></li>
+<li><p>If you’re using the Kotlin Android Extension, you can access these properties directly.</p></li>
+</ul>
+<p class="alert alert-warning">
+<strong>DO NOT</strong> instantiate or define Views or View appearances in an Activity’s <code>onCreate()</code> method, unless the properties (e.g., content) truly cannot be determined before runtime! <strong>DO</strong> specify layouts in the XML instead.
+</p>
+</div>
+<div id="practice" class="section level3 unnumbered">
+<h3>Practice</h3>
+<p>Add a new <a href="http://developer.android.com/reference/android/widget/ImageView.html"><code>ImageView</code></a> element that contains a picture. Be sure and specify its <code>id</code> and size (experiment with different options).</p>
+<p>You should specify the content of the image in the XML resource using the <code>android:src</code> attribute (use <code>@</code> to reference a <code>drawable</code>), but you can specify the content dynamically in Java code if you want to change it later.</p>
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="co">//java</span>
+<span class="bu">ImageView</span> imageView = (<span class="bu">ImageView</span>)<span class="fu">findViewById</span>(R.<span class="fu">id</span>.<span class="fu">img_view</span>);
+imageView.<span class="fu">setImageResource</span>(R.<span class="fu">drawable</span>.<span class="fu">my_image</span>);</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode kotlin"><code class="sourceCode kotlin"><span class="co">//kotlin</span>
+<span class="kw">val</span> <span class="va">imageView</span>:ImageView = findViewById&lt;ImageView&gt;(R.id.img_view)
+imageView.setImageResource(R.drawable.my_image);</code></pre></div>
+</div>
+</div>
+<div id="layouts" class="section level2">
+<h2><span class="header-section-number">2.3</span> Layouts</h2>
+<p>As mentioned above, a <a href="https://developer.android.com/guide/topics/ui/declaring-layout.html">Layout</a> is a grouping of Views (specifically, a <code>ViewGroup</code>). A Layout acts as a container for other Views, to help structure the elements on the screen. Layouts are all subclasses of <a href="https://developer.android.com/reference/android/view/ViewGroup.html"><code>ViewGroup</code></a>, so you can use its inheritance documentation to see a (mostly) complete list of options, though many of the listed classes are deprecated in favor of later, more generic/powerful options.</p>
+<div id="linearlayout" class="section level3 unnumbered">
+<h3>LinearLayout</h3>
+<p>Probably the simplest Layout to understand is the <a href="https://developer.android.com/guide/topics/ui/layout/linear.html"><code>LinearLayout</code></a>. This Layout orders the children Views in a line (“linearly”). All children are laid out in a single direction, but you can specify whether this is horizontal or vertical with the <code>android:orientation</code> property. See <a href="https://developer.android.com/reference/android/widget/LinearLayout.LayoutParams.html">LinearLayout.LayoutParams</a> for a list of all attribute options!</p>
+<ul>
+<li>Remember: since a <code>Layout</code> is a <code>ViewGroup</code> is a <code>View</code>, you can also utilize all the properties discussed above such as padding or background color; the support of the attributes is inherited! (But remember that the properties themselves are not inherited by child elements: you can’t set the <code>textSize</code> for a Layout and have it apply to all child Views).</li>
+</ul>
+<p>Another common property you might want to control in a LinearLayout is how much of any remaining space the elements should occupy (e.g., should they expand). This is done with the <code>android:layout_weght</code> property. After all element sizes are calculated (via their individual properties), the remaining space within the Layout is divided up proportionally to the <code>layout_weight</code> of each element (which defaults to <code>0</code> so default elements get no extra space). See the <a href="https://developer.android.com/guide/topics/ui/layout/linear.html#Weight">example</a> in the guide for more details.</p>
+<ul>
+<li><em>Useful tip</em>: Give elements <code>0dp</code> width or height and <code>1</code> for weight to make everything in the Layout the same size!</li>
+<li>This is a similar behavior to the <code>flex-grow</code> property in the <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">CSS Flexbox</a> framework.</li>
+</ul>
+<p>You can also use the <a href="https://developer.android.com/reference/android/widget/LinearLayout.LayoutParams.html#attr_android:layout_gravity"><code>android:layout_gravity</code></a> property to specify the “alignment” of elements within the Layout (e.g., where they “fall” to). Note that this property is declared for individual child Views to state where they are positioned; the <code>android:gravity</code> property specifies where the content of an element should be aligned.</p>
+<p><strong>An important point</strong> Since Layouts <em>are</em> Views, you can of course nest <code>LinearLayouts</code> inside each other! So you can make “grids” by creating a vertical LinearLayout containing “rows” of horizontal LinearLayouts (which contain Views). As with HTML, there are lots of different options for achieving any particular interface layout.</p>
+</div>
+<div id="relativelayout" class="section level3 unnumbered">
+<h3>RelativeLayout</h3>
+<p>A <a href="https://developer.android.com/guide/topics/ui/layout/relative.html"><code>RelativeLayout</code></a> is more flexible (and hence powerful), but can be more complex to use. In a <code>RelativeLayout</code>, children are positioned “relative” to the parent <strong>OR</strong> <em>to each other</em>. All children default to the top-left of the Layout, but you can give them properties from <a href="https://developer.android.com/reference/android/widget/RelativeLayout.LayoutParams.html"><code>RelativeLayout.LayoutParams</code></a> to specify where they should go instead.</p>
+<p>For example: <code>android:layout_verticalCenter</code> centers the View vertically within the parent. <code>android:layout_toRightOf</code> places the View to the right of the View with the given resource id (use an <code>@</code> reference to refer to the View by its id):</p>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;TextView</span>
+<span class="ot">    android:id=</span><span class="st">"@+id/first"</span>
+<span class="ot">    android:layout_width=</span><span class="st">"match_parent"</span>
+<span class="ot">    android:layout_height=</span><span class="st">"wrap_content"</span>
+<span class="ot">    android:text=</span><span class="st">"FirstString"</span> <span class="kw">/&gt;</span>
+<span class="kw">&lt;TextView</span>
+<span class="ot">    android:id=</span><span class="st">"@+id/second"</span>
+<span class="ot">    android:layout_height=</span><span class="st">"wrap_content"</span>
+<span class="ot">    android:layout_below=</span><span class="st">"@id/first"</span>
+<span class="ot">    android:layout_alignParentLeft=</span><span class="st">"true"</span>
+<span class="ot">    android:text=</span><span class="st">"SecondString"</span> <span class="kw">/&gt;</span></code></pre></div>
+<p>You do not need to specify both <code>toRightOf</code> and <code>toLeftOf</code>; think about placing one element on the screen, then putting another element relative to what came before. This can be tricky. For this reason the author prefers to use LinearLayouts, since you can always produce a Relative positioning using enough LinearLayouts (and most layouts end up being linear in some fashion anyway!)</p>
+</div>
+<div id="constraintlayout" class="section level3 unnumbered">
+<h3>ConstraintLayout</h3>
+<p><a href="https://developer.android.com/training/constraint-layout/index.html"><code>ConstraintLayout</code></a> is a Layout provided as part of an extra support library, and is what is used by Android Studio’s “Design” tool (and thus is the default Layout for new layout resources). <code>ConstraintLayout</code> works in a manner conceptually similar to <code>RelativeLayout</code>, in that you specify the location of Views in relationship to one another. However, <code>ConstraintLayout</code> offers a more powerful set of relationships in the form of <em>constraints</em>, which can be used to create highly responsive layouts. See <a href="https://developer.android.com/reference/android/support/constraint/ConstraintLayout.html">the class documentation</a> for more details and examples of constraints you can add.</p>
+<p>The main advantage of <code>ConstraintLayout</code> is that it supports development through Android Studio’s Design tool. However, since this course is focusing on implementing the resource XML files rather than using the specific tool (that may change in a year’s time), we will primarily be using other layouts.</p>
+</div>
+<div id="other-layouts" class="section level3 unnumbered">
+<h3>Other Layouts</h3>
+<p>There are many other layouts as well, though we won’t go over them all in depth. They all work in similar ways; check the individual class’s documentation for details.</p>
+<ul>
+<li><p><a href="https://developer.android.com/reference/android/widget/FrameLayout.html">FrameLayout</a> is a sort of “placeholder” layout that holds a <strong>single</strong> child View (a second child will not be shown). You can think of this layout as a way of adding a simple container to use for padding, etc. It is also highly useful for situations where the framework requires you to specify a Layout resource instead of just an individual View.</p></li>
+<li><p><a href="https://developer.android.com/reference/android/widget/GridLayout.html">GridLayout</a> arranges Views into a Grid. It is similar to LinearLayout, but places elements into a grid rather than into a line.</p>
+<p>Note that this is different than a <a href="https://developer.android.com/guide/topics/ui/layout/gridview.html">Grid<em>View</em></a>, which is a scrollable, adaptable list (similar to a ListView, which is discussed in the next lecture).</p></li>
+<li><p><a href="http://developer.android.com/guide/topics/ui/layout/grid.html">TableLayout</a> acts like an HTML table: you define <code>TableRow</code> layouts which can be filled with content. This View is not commonly used.</p></li>
+<li><p><a href="https://developer.android.com/reference/android/support/design/widget/CoordinatorLayout.html">CoordinatorLayout</a> is a class provided as part of an extra support library, and provides support for <a href="https://developer.android.com/design/material/index.html">Material Design</a> widgets and animations. See Lecture 5 for more details.</p></li>
+</ul>
+</div>
+<div id="combining-and-inflating-layouts" class="section level3 unnumbered">
+<h3>Combining and Inflating Layouts</h3>
+<p>It is possible to combine multiple layout resources files. This is useful if you want to dynamically change what Views are included, or to refactor parts of a layout into different XML files to improve code organization.</p>
+<p>As one option, you can <em>statically</em> include XML layouts inside other layouts by using an <a href="https://developer.android.com/training/improving-layouts/reusing-layouts.html"><code>&lt;include&gt;</code></a> element:</p>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;include</span><span class="ot"> layout=</span><span class="st">"@layout/sub_layout"</span><span class="kw">&gt;</span></code></pre></div>
+<p>But it is also possible to dynamically load views “manually” (e.g., in Java code) using the <a href="https://developer.android.com/reference/android/view/LayoutInflater.html"><code>LayoutInflator</code></a>. This is a class that has the job of “inflating” (rendering) Views. LayoutInflator is implicitly used in the <code>setContentView()</code> method, but can also be used independently with the following syntax:</p>
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="co">//java</span>
+LayoutInflator inflator = <span class="fu">getLayoutInflator</span>(); <span class="co">//access the inflator (called on the Activity)</span>
+<span class="bu">View</span> myLayout = inflator.<span class="fu">inflate</span>(R.<span class="fu">layout</span>.<span class="fu">my_layout</span>, parentViewGroup, <span class="kw">true</span>); <span class="co">//to attach</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode kotlin"><code class="sourceCode kotlin"><span class="co">//kotlin</span>
+<span class="kw">val</span> <span class="va">inflator</span>: LayoutInflator = getLayoutInflator(); <span class="co">//access the inflator (called on the Activity)</span>
+<span class="kw">val</span> <span class="va">myLayout</span>: View = inflator.inflate(R.layout.my_layout, parentViewGroup, <span class="kw">true</span>); <span class="co">//to attach</span></code></pre></div>
+<p>Note that we never instantiate the <code>LayoutInflator</code>, we just access an object that is defined as part of the Activity.</p>
+<p>The <a href="http://developer.android.com/reference/android/view/LayoutInflater.html#inflate(int,%20android.view.ViewGroup,%20boolean)"><code>inflate()</code></a> method takes a couple of arguments:</p>
+<ul>
+<li>The first parameter is a reference to the resource to inflate (an <code>int</code> saved in the <code>R</code> class)</li>
+<li>The second parameter is a <code>ViewGroup</code> to act as the “parent” for this View—e.g., what layout should the View be inflated inside? This can be <code>null</code> if there is not yet a layout context; e.g., you wish to inflate the View but not show it on the screen yet.</li>
+<li>The third (optional) parameter is whether to actually attach the inflated View to that parent (if not, the parent just provides context and layout parameters to use). If not assigning to parent on inflation, you can later attach the View using methods in <code>ViewGroup</code> (e.g., <code>addView(View)</code>).</li>
+</ul>
+<p>Manually inflating a View works for dynamically loading resources, and we will often see UI implementation patterns that utilize Inflators.</p>
+<p>However, for dynamic View creation explicit inflation tends to be messy and hard to maintain (UI work should be specified entirely in the XML, without needing multiple references to parent and child Views) so isn’t as common in modern development. A much cleaner solution is to use a <a href="https://developer.android.com/training/improving-layouts/loading-ondemand.html"><code>ViewStub</code></a><a href="https://info448.github.io/resources-and-layouts.html#fn7" class="footnoteRef" id="fnref7"><sup>7</sup></a>. A <code>ViewStub</code> is like an <a href="https://en.wikipedia.org/wiki/On-deck">“on deck”</a> Layout: it is written into the XML, but isn’t actually shown until you choose to reveal it via Java code. With a <code>ViewStub</code>, Android inflates the <code>View</code> at runtime, but then removes it from the parent (leaving a “stub” in its place). When you call <code>inflate()</code> (or <code>setVisible(View.VISIBLE)</code>) on that stub, it is reattached to the View tree and displayed:</p>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="co">&lt;!-- XML --&gt;</span>
+<span class="kw">&lt;ViewStub</span><span class="ot"> android:id=</span><span class="st">"@+id/stub"</span>
+<span class="ot">    android:inflatedId=</span><span class="st">"@+id/subTree"</span>
+<span class="ot">    android:layout=</span><span class="st">"@layout/mySubTree"</span>
+<span class="ot">    android:layout_width=</span><span class="st">"wrap_content"</span>
+<span class="ot">    android:layout_height=</span><span class="st">"wrap_content"</span> <span class="kw">/&gt;</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="co">//Java</span>
+ViewStub stub = (ViewStub)<span class="fu">findViewById</span>(R.<span class="fu">id</span>.<span class="fu">stub</span>);
+<span class="bu">View</span> inflated = stub.<span class="fu">inflate</span>();</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode kotlin"><code class="sourceCode kotlin"><span class="co">//kotlin</span>
+<span class="kw">val</span> <span class="va">stub</span> = findViewById&lt;ViewStub&gt;(R.id.stub);
+<span class="kw">val</span> <span class="va">inflated</span>: View = stub.inflate();</code></pre></div>
+<p>There are many other options for displaying or changing View content. Just remember to define as much of the View as possible in the XML, so that the Java code is kept simple and separate.</p>
+</div>
+</div>
+<div id="inputs" class="section level2">
+<h2><span class="header-section-number">2.4</span> Inputs</h2>
+<p>So far we you have used some basic Views such as <code>TextView</code>, <code>ImageView</code>, and <code>Button</code>.</p>
+<p>A <code>Button</code> is an example of an <a href="https://developer.android.com/guide/topics/ui/controls.html">Input Control</a>. These are simple (read single-purpose; not necessarily lacking complexity) widgets that allow for user input. There are many such widgets in addition to <code>Button</code>, mostly found in the <a href="https://developer.android.com/reference/android/widget/package-summary.html"><code>android.widget</code></a> package. Many correspond to HTML <code>&lt;input&gt;</code> elements, but Android provided additional widgets at well.</p>
+<p>You can change the lecture code’s <code>MainActivity</code> to show a View of <code>R.id.input_control_layout</code> to see an example of many widgets (as well as a demonstration of a more complex layout!). These widgets include:</p>
+<ul>
+<li><a href="https://developer.android.com/guide/topics/ui/controls/button.html">Button</a>, a widget that affords clicking. Buttons can display text, images or both.</li>
+<li><a href="https://developer.android.com/reference/android/widget/EditText.html">EditText</a>, a widget for user text entry. Note that you can use the <code>android:inputType</code> property to <a href="https://developer.android.com/training/keyboard-input/style.html">specify the type</a> of the input similar to an HTML <code>&lt;input&gt;</code>.</li>
+<li><a href="https://developer.android.com/guide/topics/ui/controls/checkbox.html">Checkbox</a>, a widget for selecting an on-off state.</li>
+<li><a href="https://developer.android.com/guide/topics/ui/controls/radiobutton.html">RadioButton</a>, a widget for selecting from a set of choices. Put <code>RadioButton</code> elements inside a <code>RadioGroup</code> element to make the buttons mutually exclusive.</li>
+<li><a href="https://developer.android.com/guide/topics/ui/controls/togglebutton.html">ToggleButton</a>, another widget for selecting an on-off state.</li>
+<li><a href="https://developer.android.com/reference/android/widget/Switch.html">Switch</a>, yet another widget for selecting an on-off state. This is just a <code>ToggleButton</code> with a slider UI. It was introduced in API 14 and is the “modern” way of supporting on-off input.</li>
+<li><a href="https://developer.android.com/guide/topics/ui/controls/spinner.html">Spinner</a>, a widget for picking from an array of choices, similar to a drop-down menu. Note that you should define the choices as a resource (e.g., in <code>strings.xml</code>).</li>
+<li><a href="https://developer.android.com/guide/topics/ui/controls/pickers.html">Pickers</a>: a compound control around some specific input (dates, times, etc). These are typically used in pop-up dialogs, which will be discussed in a future lecture.</li>
+<li>…and more! See the <a href="http://developer.android.com/reference/android/widget/package-summary.html"><code>android.widget</code></a> package for further options.</li>
+</ul>
+<p>All these input controls basically work the same way: you define (instantiate) them in the layout resource, then access them in Java in order to define interaction behavior.</p>
+<p>There are two ways of interacting with controls (and Views in general) from the Java code:</p>
+<ol style="list-style-type: decimal">
+<li>Calling <strong>methods</strong> on the View to manipulate it. This represents “outside to inside” communication (with respect to the View).</li>
+<li>Listening for <strong>events</strong> produced by the View and responding to then. This represents “inside to outside” communication (with respect to the View).</li>
+</ol>
+<p>An example of the second, event-driven approach was introduced in <a href="https://info448.github.io/introduction.html#introduction">Lecture 1</a>. This involves <em>registering a listener</em> for the event (after acquiring a reference to the View with <code>findViewById()</code>) and then specifying a <strong>callback method</strong> (by instantiating the Listener interface) that will be “called back to” when the event occurs.</p>
+<p>It is also possible to specify the callback method in the XML resource itself by using e.g., the <code>android:onClick</code> attribute. This value of this attribute should be the <em>name</em> of the callback method:</p>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;Button</span>
+<span class="ot">    android:layout_width=</span><span class="st">"wrap_content"</span>
+<span class="ot">    android:layout_height=</span><span class="st">"wrap_content"</span>
+<span class="ot">    android:onClick=</span><span class="st">"handleButtonClick"</span> <span class="kw">/&gt;</span></code></pre></div>
+<p>The callback method is declared in the Java code as taking in a <code>View</code> parameter (which will be a reference to whatever View caused the event to occur) and returning <code>void</code>:</p>
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="co">//java</span>
+<span class="kw">public</span> <span class="dt">void</span> <span class="fu">handleButtonClick</span>(<span class="bu">View</span> view) { }</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode kotlin"><code class="sourceCode kotlin"><span class="co">//kotlin</span>
+<span class="kw">fun</span> <span class="fu">handleButtonClick</span>(<span class="va">view</span>: <span class="dt">View</span>) { }</code></pre></div>
+<p>We will utilize a mix of both of these strategies (defining callbacks in both the Java and the XML) in this class.</p>
+<p class="alert">
+<em>Author’s Opinion</em>: It is arguable about which approach is “better”. Specifying the callback method in the Java code helps keep the appearance and behavior separate, and avoids introducing hidden dependencies for resources (the Activity must provide the required callback). However, as buttons are made to be pressed, it isn’t unreasonable to give a “name” in the XML resource as to what the button will do, especially as the corresponding Java method may just be a “launcher” method that calls something else. Specifying the callback in the XML resource may often seem faster and easier, and we will use whichever option best supports clarity in our code.
+</p>
+<p>Event callbacks are used to respond to all kind of input control widgets. CheckBoxes use an <code>onClick</code> callback, ToggleButtons use <code>onCheckedChanged</code>, etc. Other common events can be found in the <a href="https://developer.android.com/reference/android/view/View.html#nestedclasses">View documentation</a>, and are handled via listeners such as <code>OnDragListener</code> (for drags), <code>OnHoverListener</code> (for “hover” events), <code>OnKeyListener</code> (for when user types), or <code>OnLayoutChangeListener</code> (for when the layout changes).</p>
+<p>In addition to listening for events, it is possible to call methods directly on referenced Views to access their state. In addition to generic View methods such as <code>isVisible()</code> or <code>hasFocus()</code>, it is possible to inquire directly about the state of the input provided. For example, the <code>isChecked()</code> method returns whether or not a checkbox is ticked.</p>
+<p>This is also a good way of getting access to inputted content from the Java Code. For example, call <code>getText()</code> on an <code>EditText</code> control in order to fetch the contents of that View.</p>
+<ul>
+<li>For practice, try to log out the contents of the included <code>EditText</code> control when the <code>Button</code> is pressed!</li>
+</ul>
+<p>Between listening for events and querying for state, we can fully interact with input controls. Check the official documentation for more details on how to use specific individual widgets.</p>
+
+<!-- Lecture is dry, did not run long. MVC went here! -->
+</div>
+</div>
+<div class="footnotes">
+<hr>
+<ol start="2">
+<li id="fn2"><p><a href="https://developer.android.com/guide/topics/resources/available-resources.html" class="uri">https://developer.android.com/guide/topics/resources/available-resources.html</a><a href="https://info448.github.io/resources-and-layouts.html#fnref2">↩</a></p></li>
+<li id="fn3"><p><a href="http://developer.android.com/guide/topics/resources/providing-resources.html" class="uri">http://developer.android.com/guide/topics/resources/providing-resources.html</a><a href="https://info448.github.io/resources-and-layouts.html#fnref3">↩</a></p></li>
+<li id="fn4"><p><a href="http://developer.android.com/reference/android/view/View.html" class="uri">http://developer.android.com/reference/android/view/View.html</a><a href="https://info448.github.io/resources-and-layouts.html#fnref4">↩</a></p></li>
+<li id="fn5"><p><a href="http://developer.android.com/reference/android/view/ViewGroup.html" class="uri">http://developer.android.com/reference/android/view/ViewGroup.html</a><a href="https://info448.github.io/resources-and-layouts.html#fnref5">↩</a></p></li>
+<li id="fn6"><p><a href="http://developer.android.com/reference/android/view/View.html#lattrs" class="uri">http://developer.android.com/reference/android/view/View.html#lattrs</a><a href="https://info448.github.io/resources-and-layouts.html#fnref6">↩</a></p></li>
+<li id="fn7"><p><a href="http://developer.android.com/training/improving-layouts/loading-ondemand.html" class="uri">http://developer.android.com/training/improving-layouts/loading-ondemand.html</a><a href="https://info448.github.io/resources-and-layouts.html#fnref7">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="https://info448.github.io/introduction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="https://info448.github.io/activities.html" class="navigation navigation-next " aria-label="Next page" style="margin-right: 0px;"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="Android%20Development_%20Lecture%20Notes_files/app.min.js.download"></script>
+<script src="Android%20Development_%20Lecture%20Notes_files/lunr.js.download"></script>
+<script src="Android%20Development_%20Lecture%20Notes_files/plugin-search.js.download"></script>
+<script src="Android%20Development_%20Lecture%20Notes_files/plugin-sharing.js.download"></script>
+<script src="Android%20Development_%20Lecture%20Notes_files/plugin-fontsettings.js.download"></script>
+<script src="Android%20Development_%20Lecture%20Notes_files/plugin-bookdown.js.download"></script>
+<script src="Android%20Development_%20Lecture%20Notes_files/jquery.highlight.js.download"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": false,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["github", "facebook", "twitter", "google"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/info448/book/edit/master/layouts.Rmd",
+"text": "Edit"
+},
+"download": ["android-development.pdf", "android-development.epub"],
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(script.src))
+      script.src  = script.src.replace(/^https?:/, '');
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+
+
+</body></html>

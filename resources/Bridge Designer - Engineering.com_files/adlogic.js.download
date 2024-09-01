@@ -1,0 +1,210 @@
+const Prestitial = ($, googletag, accountId, networkName, prestitialName) => {
+    let adBlocked = true;
+
+    function fromEmail() {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get("utm_source") == "jolt" && urlParams.get("utm_medium") == "email";
+    }
+
+    function show() {
+        const prestitialDiv = document.getElementById("prestitial");
+        if (!prestitialDiv) return;
+        window.scrollTo(0, 0);
+        $("#prestitial-overlay").show();
+        prestitialDiv.style.removeProperty("opacity");
+    }
+
+    function hide() {
+        const bodyDiv = $("#body-wrapper");
+        if (bodyDiv.length === 0) return;
+
+        const prestitialEl = $('#prestitial');
+        if (bodyDiv.css("opacity") === '0') bodyDiv.css("opacity", '');
+        if (prestitialEl.length > 0) {
+            if (prestitialEl.css("opacity") !== '0') {
+                window.scrollTo(0, 0)
+            }
+            prestitialEl.remove();
+        }
+    }
+
+    function register(googletag, gTagEvent) {
+        if (gTagEvent.slot !== googletag.slots["prestitial"]) return null;
+        if (gTagEvent.isEmpty) {
+            hide();
+            return null;
+        }
+
+        adBlocked = false;
+
+        $("#prestitial").click(function () {
+            hide();
+        });
+
+        show();
+        sessionStorage.setItem("prestitial_shown", true);
+    }
+
+    if (fromEmail() || sessionStorage.getItem("prestitial_shown") || isSponsoredContent()) {
+        hide();
+        return null;
+    }
+
+    // Checks for blocked ad and the prestitial not shown...
+    setTimeout(function () {
+        if (adBlocked) hide();
+    }, 2000);
+
+    try {
+        var mapPrestitial = googletag.sizeMapping()
+            .addSize([1024, 500], [[640, 480], [525, 550]])
+            .addSize([0, 0], [[300, 400], [300, 225]])
+            .build();
+
+        googletag.slots["prestitial"] = googletag.defineSlot(`/${accountId}/${networkName}/${prestitialName}`, [[300, 225], [525, 550], [640, 480]],
+            "gam-holder-prestitial-banner").defineSizeMapping(mapPrestitial).setCollapseEmptyDiv(true).addService(googletag.pubads());
+
+        $("#prestitial-banner").append("<div id=\"gam-holder-prestitial-banner\" " +
+            "class=\"gam-holder\"><script type=\"text/javascript\">" +
+            "googletag.cmd.push(function() {googletag.display('" +
+            "gam-holder-prestitial-banner');});</script></div>"
+        );
+    } catch (err) {
+        console.error("prestitial: ", err);
+    }
+
+    return {
+        register
+    };
+};
+
+const isSponsoredContent = () => {
+    const {pathname} = window.location;
+    if (pathname.includes("sponsored_content")) return true;
+    return false;
+};
+
+const ExitBanner = ($, googletag, accountId, networkName, exitBannerName) => {
+    if (isSponsoredContent()) return null;
+    if (sessionStorage.getItem("exit_banner_shown")) return null;
+    const outOfPageSlot = googletag.defineOutOfPageSlot(`/${accountId}/${networkName}/${exitBannerName}`, `div-gpt-${exitBannerName}`);
+    if (outOfPageSlot === null) return;
+
+    googletag.slots["exit_banner"] = outOfPageSlot.addService(googletag.pubads());
+
+    $("#exit-banner").append(`<div id="div-gpt-${exitBannerName}" ` +
+        "class=\"gam-holder\"><script type=\"text/javascript\">" +
+        `window.googletag.cmd.push(function() {window.googletag.display('div-gpt-${exitBannerName}');});</script></div>`);
+
+    let advertBlocked = true;
+
+    function register(googletag, gTagEvent) {
+        if (gTagEvent.slot !== googletag.slots["exit_banner"]) return null;
+        if (gTagEvent.isEmpty) {
+            hide();
+            return null;
+        }
+
+        advertBlocked = false;
+    }
+
+    function show() {
+        const exitBannerDiv = document.getElementById("exit-banner-container");
+        $("#exit-banner-container").show();
+        $(`#div-gpt-${exitBannerName}`).show();
+        window.scrollTo(0, 0);
+        exitBannerDiv.style.removeProperty("opacity");
+        sessionStorage.setItem("exit_banner_shown", true);
+    }
+
+    $("#exit-banner-grid .close-cta").click(() => {
+        hide();
+    });
+
+    const checkScrollSpeed = (function (settings) {
+        settings = settings || {};
+        var lastPos, newPos, timer, delta, delay = settings.delay || 50;
+
+        function clear() {
+            lastPos = null;
+            delta = 0;
+        }
+
+        clear();
+        return function () {
+            newPos = window.scrollY;
+            if (lastPos != null) {
+                delta = newPos - lastPos;
+            }
+            lastPos = newPos;
+            clearTimeout(timer);
+            timer = setTimeout(clear, delay);
+            return delta;
+        };
+    })();
+
+    let previousVertical = 0;
+    const scrollListenerCallback = function () {
+        if (checkScrollSpeed() > -200) return;
+        show();
+    };
+    window.addEventListener("scroll", scrollListenerCallback);
+
+    let activityFlag = false;
+    $(window).keypress(() => activityFlag = true);
+    const inactiveInterval = setInterval(() => {
+        if (activityFlag) {
+            activityFlag = false;
+            return;
+        }
+        show();
+    }, 60000);
+
+    const mouseMoveListenerCallback = function (e) {
+        if (e.clientX <= 175 && e.clientY <= 70 && e.clientY < previousVertical) {
+            show();
+            return;
+        }
+        previousVertical = e.clientY;
+    };
+
+    window.addEventListener("mousemove", mouseMoveListenerCallback);
+
+    function hide() {
+        clearInterval(inactiveInterval);
+        window.removeEventListener("scroll", scrollListenerCallback);
+        window.removeEventListener("mousemove", mouseMoveListenerCallback);
+        $("#exit-banner-container").hide();
+    }
+
+    setTimeout(() => {
+        if (advertBlocked) {
+            hide();
+        }
+    }, 1500);
+
+    return {
+        register
+    };
+};
+
+(function ($) {
+    window.googletag = window.googletag || {cmd: []};
+    googletag.cmd.push(function () {
+        const gamAccountId = GAMaccountID || "";
+        const gamNetworkName = GAMnetworkName || "";
+        const prestitialName = GAMadUnitName || "";
+        const exitBannerName = GAMadUnitNameExit || "";
+
+        let prestitial = null;
+        let exitBanner = null;
+
+        if (prestitialName) prestitial = Prestitial($, googletag, gamAccountId, gamNetworkName, prestitialName);
+        if (exitBannerName) exitBanner = ExitBanner($, googletag, gamAccountId, gamNetworkName, exitBannerName);
+
+        googletag.pubads().addEventListener("slotRenderEnded", (gTagEvent) => {
+            if (prestitial !== null) prestitial.register(googletag, gTagEvent);
+            if (exitBanner !== null) exitBanner.register(googletag, gTagEvent);
+        });
+    });
+})(jQuery);

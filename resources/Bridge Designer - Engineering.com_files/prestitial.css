@@ -1,0 +1,53 @@
+#prestitial {
+    height: 100vh;
+    text-align: center;
+    z-index: 99999;
+    position: relative;
+}
+
+#prestitial-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: -9999999;
+    display: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(gray), to(lightgray));
+    background: linear-gradient(gray, lightgray); }
+
+.prestitial-logo {
+    grid-area: headerlogo;
+    margin-top: 20px;
+    margin-left: 20px;
+    text-align: left; }
+
+#prestitial-banner {
+    grid-area: banner; }
+
+.close-cta {
+    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase;
+    font-size: 122%;
+    font-weight: bold;
+    text-align: right;
+    color: black;
+    cursor: pointer;
+    grid-area: headercta;
+    margin-top: 20px;
+    margin-right: 20px; }
+@media (max-width: 480px) {
+    .close-cta {
+        margin-top: 10px;
+        margin-bottom: 10px; } }
+
+@media (min-width: 768px) {
+    #prestitial-grid {
+        display: grid;
+        grid-template-columns: 121px auto auto 121px;
+        grid-template-rows: 150px auto;
+        grid-template-areas: "headerlogo headerlogo headercta headercta" "blank banner banner otherblank"; } }
+
