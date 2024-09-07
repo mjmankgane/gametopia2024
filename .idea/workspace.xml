@@ -4,7 +4,107 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59166326-8cb3-4605-a47c-c0f387a38f0a" name="Changes" comment="" />
+    <list default="true" id="59166326-8cb3-4605-a47c-c0f387a38f0a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/NOTICE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/analytics-library/protos/src/main/proto/proto.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/analytics-library/shared/tools.analytics-shared.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/analytics-library/tracker/tools.analytics-tracker.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/annotations/annotations.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/apkanalyzer-classpath.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/apkparser/analyzer/analyzer.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/apkparser/cli/analyzer-cli.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/apkparser/tools.binary-resources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/avdmanager-classpath.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/build-system/aapt2-proto/aapt2-proto.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/build-system/builder-model/builder-model.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/build-system/shrinker/libshrinker.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/build-system/tools.manifest-merger.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/common/tools.common.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/ddmlib/tools.ddmlib.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/device_validator/tools.dvlib.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/archive-patcher/explainer.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/archive-patcher/generator.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/archive-patcher/shared.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/com/android/tools/smali/smali-baksmali/3.0.3/smali-baksmali-3.0.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/com/android/tools/smali/smali-dexlib2/3.0.3/smali-dexlib2-3.0.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/com/android/tools/smali/smali-util/3.0.3/smali-util-3.0.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/com/beust/jcommander/1.78/jcommander-1.78.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/com/google/code/gson/gson/2.10/gson-2.10.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/com/google/errorprone/error_prone_annotations/2.16/error_prone_annotations-2.16.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/com/google/guava/guava/31.1-jre/guava-31.1-jre.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/com/google/jimfs/jimfs/1.1/jimfs-1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/com/google/protobuf/protobuf-java/3.19.3/protobuf-java-3.19.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/com/sun/activation/javax.activation/1.2.0/javax.activation-1.2.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/com/sun/istack/istack-commons-runtime/3.0.8/istack-commons-runtime-3.0.8.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/com/sun/xml/fastinfoset/FastInfoset/1.2.16/FastInfoset-1.2.16.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/commons-codec/commons-codec/1.15/commons-codec-1.15.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/commons-io/commons-io/2.4/commons-io-2.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/commons-logging/commons-logging/1.2/commons-logging-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/jakarta/activation/jakarta.activation-api/1.2.1/jakarta.activation-api-1.2.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/jakarta/xml/bind/jakarta.xml.bind-api/2.3.2/jakarta.xml.bind-api-2.3.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/javax/inject/javax.inject/1/javax.inject-1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/lint-psi/intellij-core/intellij-core-mvn.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/lint-psi/kotlin-compiler/kotlin-compiler-mvn.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/lint-psi/uast/uast.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/net/java/dev/jna/jna-platform/5.6.0/jna-platform-5.6.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/net/java/dev/jna/jna/5.6.0/jna-5.6.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/net/sf/jopt-simple/jopt-simple/4.9/jopt-simple-4.9.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/net/sf/kxml/kxml2/2.3.0/kxml2-2.3.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/org/apache/commons/commons-compress/1.21/commons-compress-1.21.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/org/apache/httpcomponents/httpclient/4.5.14/httpclient-4.5.14.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/org/apache/httpcomponents/httpcore/4.4.16/httpcore-4.4.16.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/org/apache/httpcomponents/httpmime/4.5.6/httpmime-4.5.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/org/bouncycastle/bcpkix-jdk15on/1.67/bcpkix-jdk15on-1.67.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/org/bouncycastle/bcprov-jdk15on/1.67/bcprov-jdk15on-1.67.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/org/checkerframework/checker-qual/3.21.2/checker-qual-3.21.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/org/glassfish/jaxb/txw2/2.3.2/txw2-2.3.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/org/jetbrains/annotations/13.0/annotations-13.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/org/jetbrains/intellij/deps/trove4j/1.0.20200330/trove4j-1.0.20200330.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/org/jetbrains/kotlin/kotlin-reflect/1.9.0/kotlin-reflect-1.9.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/org/jetbrains/kotlin/kotlin-stdlib-common/1.9.0/kotlin-stdlib-common-1.9.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.9.0/kotlin-stdlib-jdk7-1.9.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.9.0/kotlin-stdlib-jdk8-1.9.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/org/jetbrains/kotlin/kotlin-stdlib/1.9.0/kotlin-stdlib-1.9.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/org/jetbrains/kotlinx/kotlinx-cli-jvm/0.3.1/kotlinx-cli-jvm-0.3.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/org/jvnet/staxex/stax-ex/1.8.1/stax-ex-1.8.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/org/ow2/asm/asm-analysis/9.2/asm-analysis-9.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/org/ow2/asm/asm-tree/9.2/asm-tree-9.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/org/ow2/asm/asm/9.2/asm-9.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/xerces/xercesImpl/2.12.0/xercesImpl-2.12.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/external/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/layoutlib-api/tools.layoutlib-api.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/lint-classpath.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/lint/cli/cli.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/lint/lint-checks-proto.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/lint/tools.lint-api.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/lint/tools.lint-checks.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/lint/tools.lint-model.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/misc/screenshot2/libscreenshot2lib.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/profgen-classpath.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/profgen/profgen-cli/libprofgen-cli-lib.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/profgen/profgen/libprofgen.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/r8.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/repository/tools.repository.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/resourceshrinker-classpath.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/retrace-classpath.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/screenshot2-classpath.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/sdk-common/tools.sdk-common.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/sdklib/libavdmanager_lib.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/sdklib/libsdkmanager_lib.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/sdklib/sdklib.core.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/sdklib/tools.sdklib.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/lib/sdkmanager-classpath.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/cmdline-tools/source.properties" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,6 +128,9 @@
     &quot;accountId&quot;: &quot;b11ad635-f446-4b38-9f2a-c6bb3757d486&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -36,18 +139,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/MJ/CSC102/gametopia2024&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "com.google.services.firebase.aqiPopupShown": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/MJ/CSC102/gametopia2024",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "AndroidSdkUpdater"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -63,5 +171,16 @@
       <updated>1725197735661</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
