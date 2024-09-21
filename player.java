@@ -1,12 +1,15 @@
 import java.util.*;
 
 /**
-  * Encapsulates the details of the player in a game.
+  * Encapsulates the details of the player in a level in the game.
   */
 class player {
 	
     private List<String> parts; // List of parts of the bridge 
 
+    public player(){
+      
+    }// constructor
     public player(String[] initialParts) {
         parts = new LinkedList<>();
         for (int k = 0; k < initialParts.length; k++)
