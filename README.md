@@ -1,10 +1,10 @@
 Group name: GameTopia (Group 14)
 
-Group members: Mponane Mankgane, Bonolo Kwadi, Thoblie Sibiya
+Group members: Mponane Mankgane, Thoblie Sibiya
 
 Group mentor: Amogelang Mphela
 
-Project title: Bridgett by GameTopia
+Project title: Snake Island by GameTopia
 
 Project page: https://github.com/mjmankgane/gametopia2024
 
